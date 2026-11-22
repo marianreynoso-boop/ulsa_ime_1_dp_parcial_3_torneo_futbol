@@ -26,3 +26,16 @@ cout << "\n--- MODO DE SIMULACION ---\n";
         cout << "Opcion no valida. Elige 1 o 2.\n";
         modo = leerEntero("Elige una opcion: ");
     }
+
+    int indicePartido = 0; 
+    for (int i = 0; i <MAX_EQUIPOS -1; i++){
+        for (int j = i + 1; j < MAX_EQUIPOS; j++){
+             partidos [indicePartido].local= i;
+            partidos[indicePartido].visitante =j;
+    if (modo == 1) {
+        partidos[indicePartido].golesLocal = numeroAleatorio();
+        partidos [indicePartido].golesVisitante = numeroAleatorio();
+    } else {
+        partidos[indicePartido].golesLocal = MARCADORES_PRUEBA[indicePartido][0];
+        partidos [indicePartido].golesVisitante = MARCADORES_PRUEBA[indicePartido][1];
+    }
