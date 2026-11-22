@@ -62,9 +62,9 @@ int main(){
             // Llamada correcta a la función pasándole las variables directamente:
             mostrarEquipos(equipos, totalEquipos); 
             
-            std::cout<< "---Equipos Registrados--- \n" ;
+            std::cout<< "---Equipos Registrados---\n" ;
             break;
-            std::cout<< "---Equipos Registrados--- \n" ;
+            std::cout<< "---Equipos Registrados/n" ;
             break;
         case 3:
             std::cout<< "Simulación de torneo ";
