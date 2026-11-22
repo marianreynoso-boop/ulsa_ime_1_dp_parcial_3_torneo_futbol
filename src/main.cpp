@@ -81,6 +81,9 @@ int main() {
                                 std::string nombreBuscado;
                                 std::cout <<"Ingrese el nombre del equipo a consultar: ";
                                 std::cin >> nombreBuscado;
+                                    
+                                    const Equipo* equipoEncontrado = buscarEquipo(equipos, totalEquipos, nombreBuscado);
+                                    if (equipoEncontrado != nullptr)
                                 }
 
         
