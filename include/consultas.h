@@ -63,5 +63,15 @@ inline void imprimirConsulta(const Equipo* equipos, int totalEquipos,
         std::string marcador = std::to_string(golesPropios) + " - " + std::to_string(golesRival);
         std::cout << std::left << std::setw(17) << rival
                   << std::setw(10) << marcador << resultado << '\n';
+    
+        void mostrarEquipos(const Equipo arregloEquipos[], int totalEquipos) {
+            if (totalEquipos == 0){
+            std::cout << " No hay equipos registrados ";
+            return ;
+        }
+        
+        for (int i = 0; i < totalEquipos; i++){
+            std::cout << arregloEquipos[i].nombre << "\n";
+        }
     }
 }
