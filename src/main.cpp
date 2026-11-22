@@ -92,7 +92,8 @@ int main() {
                                         std::cout <<"Empatados: " <<equipoEncontrado->PE<< "\n";
                                         std::cout <<"Perdidos: " <<equipoEncontrado->PP<< "\n";
                                         std::cout <<"Goles a favor: " <<equipoEncontrado->GF<< "\n";
-                                    
+                                        std::cout <<"Goles en contra: " <<equipoEncontrado->GC<< "\n";
+                                        std::cout <<"Puntos: " <<equipoEncontrado->PTS<< "\n";
                                     }
                                 }
 
