@@ -73,23 +73,7 @@ int main() {
             std::cout<< "Simulación de torneo ";
             break;
         case 9:
-            case 1:
-                std::cout << "Ingrese nombre del equipo a registrar: ";
-                break;
-            case 2:
-                std::cout << "Equipos Registrados:\n";
-                void mostrarEquipos (const std::string Equipos[], int totalEquipos );
-                std::cout<< "---Equipos Registrados--- \n" ;
-                break;
-            case 3:
-                std::cout << "Simulacion de torneo\n";
-                break;
-            case 4:
-                std::cout << "Saliendo del sistema...\n";
-                break;
-            default:
-                std::cout << "Opcion no valida. Intenta de nuevo.\n";
-                break;
+           
     }
     } return 0;
 }
