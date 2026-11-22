@@ -16,29 +16,31 @@
 
 #include "utilerias.h"
 #include "torneo.h"
-#include "consulta.h"
 
 // TODO: incluyan aqui el archivo .h de cada modulo.
 #include "clasificacion_campeon.h"
 #include "consulta.h"
 #include "escenario_prueba.h"
+#include "simulacion.h"
+#include "estadisticas_equipo.h"
 
-int main(){
+int main() {
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
     Equipo equipos[MAX_EQUIPOS];
-    int totalEquipos = 0;
-
     Partido partidos[TOTAL_PARTIDOS];
+    int totalEquipos = 0;
     int totalPartidos = 0;
+    int simulacionHecha = false;
 
-    std::string nombre;
     std::cout << "Ingresa tu nombre: ";
-    std::cin >> nombre;
+    std::string nombre;
+    std::getline(std::cin, nombre);
     std::cout << "Hola " << nombre << "\n";
     std::cout << "Bienvenido al Sistema de Gestion del Torneo de Futbol\n";
 
     int opcion = 0;
+
     while (opcion != 9) {
         std::cout << "\nSelecciona una opcion:\n";
         std::cout << "1. Registrar Equipo\n";
@@ -50,8 +52,8 @@ int main(){
         std::cout << "7. Consultar Equipo\n";
         std::cout << "8. Mostrar matriz de enfrentamientos\n";
         std::cout << "9. Salir\n";
-        std::cout << "Ingresa tu opcion: ";
-        std::cin >> opcion;
+       
+        opcion = LeerEntero("Ingresa tu opcion: ");
 
     switch(opcion){
         case 1:
