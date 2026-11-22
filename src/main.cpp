@@ -23,10 +23,10 @@
 #include "escenario_prueba.h"
 #include "simulacion.h"
 #include "estadisticas_equipo.h"
-
-int main() {
-    // TODO: declaren aqui los datos del torneo.
+ // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
+int main() {
+   
     Equipo equipos[MAX_EQUIPOS];
     Partido partidos[TOTAL_PARTIDOS];
     int totalEquipos = 0;
@@ -58,7 +58,7 @@ int main() {
     switch (opcion) {
         case 1:
         std::cout<< "Ingrese nombre del equipo a registrar: ";
-        std::cout<< "Equipo registrado con éxito \n" ;
+        std::cout<< "Equipo registrado con exito \n" ;
         break;
             case 2:
             std::cout << "Lista de Equipos Registrados:\n"; 
@@ -102,6 +102,7 @@ int main() {
 
         
         case 9:
+        break;
            
     }
     } return 0;
