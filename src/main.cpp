@@ -52,7 +52,6 @@ int main(){
         std::cout << "Ingresa tu opcion: ";
         std::cin >> opcion;
 
-<<<<<<< HEAD
     switch(opcion){
         case 1:
            std::cout<< "Ingrese nombre del equipo a registrar: ";
@@ -71,21 +70,6 @@ int main(){
             std::cout<< "Simulación de torneo ";
             break;
         case 9:
-=======
-        switch (opcion) {
-            case 1:
-                std::cout << "Ingrese nombre del equipo a registrar: ";
-                break;
-            case 2:
-                std::cout << "Equipos Registrados:\n";
-                void mostrarEquipos (const std::string Equipos[], int totalEquipos );
-                std::cout<< "---Equipos Registrados--- \n" ;
-                break;
-            case 3:
-                std::cout << "Simulacion de torneo\n";
-                break;
-            case 9:
->>>>>>> 66bebdb6a11b9e2ad4db2fb9a44b7c8965b4806a
                 std::cout << "Saliendo del sistema...\n";
                 break;
             default:
