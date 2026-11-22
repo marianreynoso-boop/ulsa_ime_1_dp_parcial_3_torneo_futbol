@@ -34,6 +34,7 @@ const int PUNTOS_VICTORIA = 3;
 const int PUNTOS_EMPATE = 1;
 const int PUNTOS_DERROTA = 0;
 
+
 // ---------- Registros (equipo) ----------
 // Escriban aqui los struct del torneo.
 struct Equipo{
@@ -50,7 +51,9 @@ struct Equipo{
 struct Partido {
    std::string local;
    std::string visitante;
-
+   int golesLocal = 0;
+   int golesVisitante = 0;
 }
 // ---------- Funciones comunes (equipo) ----------
-// Escriban aqui las funciones que varios modulos comparten
+// Escriban aqui las funciones que varios modulos comparten 
+;
