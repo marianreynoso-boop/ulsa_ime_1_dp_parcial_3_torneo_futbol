@@ -77,14 +77,19 @@ int main() {
                             case 6:
                             std::cout<< "CAMPEON: \n";
                             break;
-                                case 7: {
+                                
+                            case 7: {
                                 std::string nombreBuscado;
                                 std::cout <<"Ingrese el nombre del equipo a consultar: ";
                                 std::cin >> nombreBuscado;
                                     
                                     const Equipo* equipoEncontrado = buscarEquipo(equipos, totalEquipos, nombreBuscado);
                                     if (equipoEncontrado != nullptr) {
-                                        std::cout <<"\n--- !Equipo Encontrado¡ ---\n";
+                                        std::cout <<"\n--- FICHA DE EQUIPO ---\n";
+                                        std::cout <<"Equipo: " <<equipoEncontrado->nombre<< "\n";
+                                        std::cout <<"Jugados: " <<equipoEncontrado->PJ<< "\n";
+                                        std::cout <<"Ganados: " <<equipoEncontrado->PG<< "\n";
+                                        std::cout <<"Empatados: "<<equipoEncontrado->PE<< "\n";
                                     }
                                 }
 
