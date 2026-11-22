@@ -16,9 +16,10 @@
 
 #include "utilerias.h"
 #include "torneo.h"
+
 // TODO: incluyan aqui el archivo .h de cada modulo.
 #include "clasificacion_campeon.h"
-#include "consultas.h"
+#include "consulta.h"
 #include "escenario_prueba.h"
 #include "simulacion.h"
 #include "estadisticas_equipo.h"
@@ -72,6 +73,7 @@ int main() {
             std::cout<< "Simulación de torneo ";
             break;
         case 9:
+<<<<<<< HEAD
             case 1:
                 std::cout << "Ingrese nombre del equipo a registrar: ";
                 break;
@@ -89,6 +91,10 @@ int main() {
             default:
                 std::cout << "Opcion no valida. Intenta de nuevo.\n";
                 break;
+=======
+       
+        }
+>>>>>>> 4e32a1b5acb4f813019cbaf1e9ff278005c49c40
     }
     } return 0;
 }
