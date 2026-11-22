@@ -94,7 +94,10 @@ int main() {
                                         std::cout <<"Goles a favor: " <<equipoEncontrado->GF<< "\n";
                                         std::cout <<"Goles en contra: " <<equipoEncontrado->GC<< "\n";
                                         std::cout <<"Puntos: " <<equipoEncontrado->PTS<< "\n";
+                                    } else {
+                                        std::cout << "NO SE ENCONTRO NINGUN EQUIPO LLAMADO: " << nombreBuscado << "\n";
                                     }
+                                    break;
                                 }
 
         
