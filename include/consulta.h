@@ -8,4 +8,4 @@
 
 void mostrarEquipos(const Equipo arregloEquipos[], int totalEquipos);
 
-Equipo* buscarEquipo(const Equipo arregloEquipos[], int totalEquipos, std::string nombreBuscado);
+const Equipo* buscarEquipo(const Equipo arregloEquipos[], int totalEquipos, std::string nombreBuscado);
