@@ -57,10 +57,6 @@ int opcion = 0;
         case 1:
            std::cout<< "Ingrese nombre del equipo a registrar: ";
 
-            break;
-        case 2:
-            std::cout<< "Equipos Registrados: ";
-            void mostrarEquipos (const std::string Equipos[], int totalEquipos );
             std::cout<< "---Equipos Registrados--- \n" ;
             break;
         case 3:
