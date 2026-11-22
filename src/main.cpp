@@ -83,7 +83,9 @@ int main() {
                                 std::cin >> nombreBuscado;
                                     
                                     const Equipo* equipoEncontrado = buscarEquipo(equipos, totalEquipos, nombreBuscado);
-                                    if (equipoEncontrado != nullptr)
+                                    if (equipoEncontrado != nullptr) {
+                                        std::cout <<"\n--- !Equipo Encontrado¡ ---\n";
+                                    }
                                 }
 
         
