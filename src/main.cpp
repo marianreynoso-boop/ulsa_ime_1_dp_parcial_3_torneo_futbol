@@ -84,7 +84,7 @@ int main() {
             case 3:
                 std::cout << "Simulacion de torneo\n";
                 break;
-            case 9:
+            case 4:
                 std::cout << "Saliendo del sistema...\n";
                 break;
             default:
