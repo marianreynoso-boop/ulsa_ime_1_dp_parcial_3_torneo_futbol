@@ -52,8 +52,9 @@ struct Partido {
    std::string local;
    std::string visitante;
    int golesLocal = 0;
-   int golesVisitante = 0;
+   int golesVisitante = 0; 
 };
+
 // ---------- Funciones comunes (equipo) ----------
 // Escriban aqui las funciones que varios modulos comparten 
 ;
