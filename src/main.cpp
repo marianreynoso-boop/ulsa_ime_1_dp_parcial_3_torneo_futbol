@@ -57,21 +57,33 @@ int main() {
 
     switch (opcion) {
         case 1:
-           std::cout<< "Ingrese nombre del equipo a registrar: ";
-
-            std::cout<< "---Equipos Registrados--- \n" ;
-            break;
-        case 2:
-            std::cout << "Equipos Registrados:\n";
-            
-            // Llamada correcta a la función pasándole las variables directamente:
+        std::cout<< "Ingrese nombre del equipo a registrar: ";
+        std::cout<< "Equipo registrado con éxito \n" ;
+        break;
+            case 2:
+            std::cout << "Lista de Equipos Registrados:\n"; 
             mostrarEquipos(equipos, totalEquipos); 
-            
             std::cout<< "---Equipos Registrados--- \n" ;
             break;
-        case 3:
-            std::cout<< "Simulación de torneo ";
-            break;
+                case 3:
+                std::cout<< "Simulación de torneo \n";
+                break;
+                    case 4:
+                    std::cout<< "Resultados: \n";
+                    break;
+                        case 5:
+                        std::cout<< "Tabla de Posiciones: \n";
+                        break;
+                            case 6:
+                            std::cout<< "CAMPEON: \n";
+                            break;
+                                case 7: {
+                                std::string nombreBuscado;
+                                std::cout <<"Ingrese el nombre del equipo a consultar: ";
+                                std::cin >> nombreBuscado;
+                                }
+
+        
         case 9:
            
     }
