@@ -64,7 +64,7 @@ inline void imprimirConsulta(const Equipo* equipos, int totalEquipos,
         std::cout << std::left << std::setw(17) << rival
                   << std::setw(10) << marcador << resultado << '\n';
     
-        void mostrarEquipos(const Equipo arregloEquipos[], int totalEquipos) {
+        void mostrarEquipos(const Equipo arregloEquipos[], int totalEquipos); {
             if (totalEquipos == 0){
             std::cout << " No hay equipos registrados ";
             return ;
