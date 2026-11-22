@@ -6,15 +6,7 @@
 #include "torneo.h"
 #include "utilerias.h"
 
-inline const Equipo* buscarEquipo(const Equipo* equipos, int totalEquipos,
-                                  const std::string& nombre) {
-    for (int i = 0; i < totalEquipos; ++i) {
-        if (nombresIguales(equipos[i].nombre, nombre)) {
-            return &equipos[i];
-        }
-    }
-    return nullptr;
-}
+void mostrarEquipos(const Equipo arregloEquipos[], int totalEquipos);
 
 inline void imprimirConsulta(const Equipo* equipos, int totalEquipos,
                              const Partido partidos[], int totalPartidos,
@@ -64,14 +56,5 @@ inline void imprimirConsulta(const Equipo* equipos, int totalEquipos,
         std::cout << std::left << std::setw(17) << rival
                   << std::setw(10) << marcador << resultado << '\n';
     
-        void mostrarEquipos(const Equipo arregloEquipos[], int totalEquipos); {
-            if (totalEquipos == 0){
-            std::cout << " No hay equipos registrados ";
-            return ;
-        }
-        
-        for (int i = 0; i < totalEquipos; i++){
-            std::cout << arregloEquipos[i].nombre << "\n";
-        }
     }
 }
