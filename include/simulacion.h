@@ -8,9 +8,13 @@
 #include <escenario_prueba.h> 
 
 using namespace std;
-bool simulartorneo (const Equipo [],int numEquipos, Partido partidos[], int &numPartidos, bool&ya simulado){
+bool simulartorneo (const Equipo [],int numEquipos, Partido partidos[], int &numPartidos, bool& yasimulado){
 if (numEquipos <MAX_EQUIPOS){
- cout<< "Error: Debes registrar los "<< MAX_Equipos <<" equipos antes de simular./n";
+ cout<< "Error: Debes registrar los "<< MAX_EQUIPOS <<" equipos antes de simular./n";
  return false; 
 }
-if (ya )
+if (yasimulado) {
+        cout << "Error: El torneo ya fue simulado anteriormente.\n";
+        return false;
+    }
+    
