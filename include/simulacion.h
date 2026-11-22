@@ -39,3 +39,4 @@ cout << "\n--- MODO DE SIMULACION ---\n";
         partidos[indicePartido].golesLocal = GOLES_PRUEBA[indicePartido][0];
         partidos [indicePartido].golesVisitante = GOLES_PRUEBA[indicePartido][1];
     }
+}
