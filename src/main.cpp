@@ -30,7 +30,7 @@ int main() {
     Partido partidos[TOTAL_PARTIDOS];
     int totalEquipos = 0;
     int totalPartidos = 0;
-    int simulacionHecha = false;
+    bool simulacionHecha = false;
 
     std::cout << "Ingresa tu nombre: ";
     std::string nombre;
@@ -52,9 +52,9 @@ int main() {
         std::cout << "8. Mostrar matriz de enfrentamientos\n";
         std::cout << "9. Salir\n";
        
-        opcion = LeerEntero("Ingresa tu opcion: ");
+        opcion = leerEntero("Ingresa tu opcion: ");
 
-    switch(opcion){
+    switch (opcion) {
         case 1:
            std::cout<< "Ingrese nombre del equipo a registrar: ";
 
@@ -72,7 +72,6 @@ int main() {
             std::cout<< "Simulación de torneo ";
             break;
         case 9:
-        switch (opcion) {
             case 1:
                 std::cout << "Ingrese nombre del equipo a registrar: ";
                 break;
@@ -90,10 +89,8 @@ int main() {
             default:
                 std::cout << "Opcion no valida. Intenta de nuevo.\n";
                 break;
-        }
     }
-
-    return 0;
+    } return 0;
 }
   
 
