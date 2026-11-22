@@ -31,7 +31,7 @@ cout << "\n--- MODO DE SIMULACION ---\n";
     for (int i = 0; i <MAX_EQUIPOS -1; i++){
         for (int j = i + 1; j < MAX_EQUIPOS; j++){
              partidos [indicePartido].local= i;
-            partidos[indicePartido].visitante =j;}}
+            partidos[indicePartido].visitante =j;
     if (modo == 1) {
         partidos[indicePartido].golesLocal = numeroAleatorio();
         partidos [indicePartido].golesVisitante = numeroAleatorio();
@@ -39,4 +39,12 @@ cout << "\n--- MODO DE SIMULACION ---\n";
         partidos[indicePartido].golesLocal = GOLES_PRUEBA[indicePartido][0];
         partidos [indicePartido].golesVisitante = GOLES_PRUEBA[indicePartido][1];
     }
+    indicePartido++;
+}
+}
+
+numPartidos = indicePartido;
+yasimulado = true;
+
+return true;
 }
