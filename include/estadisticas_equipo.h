@@ -82,4 +82,10 @@ inline void acumularResultadoPartido(Equipo& equipoLocal,
     const int idxVisitante = buscarIndiceEquipo(equipos, MAX_EQUIPOS, partidos[p].visitante);
 
     if (idxLocal != -1 && idxVisitante != -1) {
+        acumularResultadoPartido(
+            equipos[idxLocal],
+            equipos[idxVisitante],
+            partidos[p]
+        )
+        
   
