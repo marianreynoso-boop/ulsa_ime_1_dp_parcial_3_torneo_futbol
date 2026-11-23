@@ -60,5 +60,10 @@ inline void acumularResultadoPartido(Equipo& equipoLocal,
         equipoLocal.PG += 1;
         equipoLocal.PTS += PUNTOS_VICTORIA;
         equipoVisitante.PP += 1;
-        equipoVisitante.PTS += PUNTOS_DERROTA;
-   
+        equipoVisitante.PTS += PUNTOS_DERROTA
+    } else if (golesLocal < golesVisitante) {
+        equipoVisitante.PG += 1;
+        equipoVisitante.PTS += PUNTOS_VICTORIA;
+        equipoLocal.PP += 1;
+        equipoLocal.PTS += PUNTOS_DERROTA;
+    
