@@ -134,7 +134,105 @@ Despues vuelve a pedir la opcion hasta que el usuario escriba una valida.]
 Tu receta en pseudocódigo, escrita antes de programar.
 
 ```
-[Inserta aquí tu respuesta]
+[ FUNCION intercambiarEquipos(equipoA, equipoB)
+
+    Crear una variable auxiliar
+
+    Guardar el equipo A en la variable auxiliar
+
+    Copiar el equipo B en el lugar del equipo A
+
+    Copiar el equipo auxiliar en el lugar del equipo B
+
+FIN FUNCION
+
+
+FUNCION ordenarClasificacion(equipos, cantidad)
+
+    PARA i desde 0 hasta cantidad - 2
+
+        PARA j desde 0 hasta cantidad - 2 - i
+
+            SI los puntos del equipo j
+               son menores que los puntos del equipo j + 1
+
+                Intercambiar los dos equipos
+
+            FIN SI
+
+        FIN PARA
+
+    FIN PARA
+
+FIN FUNCION
+
+
+FUNCION mostrarTabla(equipos, cantidad, torneoSimulado)
+
+    SI el torneo no ha sido simulado
+
+        Mostrar mensaje de rechazo
+
+        Regresar al menu
+
+    FIN SI
+
+    Copiar los equipos en un arreglo auxiliar
+
+    Ordenar el arreglo auxiliar
+
+    Mostrar encabezado de la tabla
+
+    PARA cada equipo del arreglo auxiliar
+
+        Mostrar posicion y estadisticas
+
+    FIN PARA
+
+FIN FUNCION
+
+
+FUNCION mostrarCampeon(equipos, cantidad, torneoSimulado)
+
+    SI el torneo no ha sido simulado
+
+        Mostrar mensaje de rechazo
+
+        Regresar al menu
+
+    FIN SI
+
+    Buscar la mayor cantidad de puntos
+
+    Guardar los equipos que tengan esos puntos
+
+    SI solamente existe un equipo
+
+        Mostrar nombre del campeon
+
+        Mostrar sus puntos
+
+    SI NO
+
+        Mostrar los equipos empatados
+
+        Pedir al usuario que elija
+
+        Validar la opcion
+
+        REPETIR mientras la opcion sea invalida
+
+            Volver a pedir la opcion
+
+        FIN REPETIR
+
+        Mostrar el campeon elegido
+
+        Mostrar sus puntos
+
+    FIN SI
+
+FIN FUNCION]
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
