@@ -237,7 +237,11 @@ FIN FUNCION]
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
 
-[Inserta aquí tu respuesta]
+[Si, revise la receta utilizando los resultados del escenario de prueba. Primero identifique los puntos de cada equipo y despues los acomode de mayor a menor.
+
+Con los datos del ejemplo, Aguilas y Leones terminan con 10 puntos, por lo que existe un empate en el primer lugar. La receta permite detectar que ambos equipos tienen la misma cantidad de puntos y muestra las dos opciones para que el usuario elija al campeon.
+
+Tambien considere que el arreglo original no debe modificarse al ordenar la tabla, por eso agregue el paso de copiar los equipos a un arreglo auxiliar.]
 
 ## 6. Pruebas
 
@@ -245,9 +249,13 @@ Incluye casos normales y casos límite.
 
 | # | Qué probaste | Entrada | Resultado esperado | Resultado obtenido |
 | --- | --- | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [Mostrar tabla antes de disimular] | [torneoSimulado = false] | [Mostrar mensaje de rechazo] | [Se muestra el mensaje de rechazo] |
+| 2 | [Ordenar la tabla] | [Equipos con 10, 4, 9, 10, 3 y 7 puntos] | [Ordenar de mayor a menor] | [La tabla quedda ordenadamente] |
+| 3 | [Detectar  empate en primer lugar] | [Aguilas y Leones con 10 puntos] | [Mostrar los dos equipos empatados] | [Se muestran aguilas y leones] |
+| 4 | [Elegir campeon valido] | [Opcion 2] | [Mostrar al segundo equipo empatado como campeon] | [Se muestra leones como campeon] |
+| 5 | [Elegir opcion invalida] | [Opcion 5 cuando hay 2 empatados] | [Mostar rechazo y volver a preguntar] | [Se vuelve a pedir la opcion] |
+| 6 | [Consultar campeon sin empate] | [Un equipo con ms puntos que los demas] | [Mostrar directamente al campeon] | [Se muestra el equipo con mas puntos] |
+| 7 | [Revisar orden original] | [Mostar equipos despues de ordenar la tabla] | [Conservar el orden de registro] | [Los equips conservan su orden original] |
 
 ## 7. Bitácora de dudas y errores
 
