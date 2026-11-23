@@ -29,5 +29,8 @@ for (int i = 0; i < MAX_EQUIPOS; i++) {
     }
 }
 
+for (int columna = 1; columna < MAX_EQUIPOS + 1; columna++) {
+    m[0][columna] = abreviaturas[columna - 1];
+}
 
 }
