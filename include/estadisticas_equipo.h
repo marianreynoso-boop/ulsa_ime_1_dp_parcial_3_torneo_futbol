@@ -33,7 +33,7 @@ inline int buscarIndiceEquipo(const Equipo (&equipos)[MAX_EQUIPOS],
 
     for (int i = 0; i < cantidadEquipos; ++i) {
         if (aMinusculasEstadisticas(equipos[i].nombre) == objetivo) {
-          
+          return i;
         }
     }
 
