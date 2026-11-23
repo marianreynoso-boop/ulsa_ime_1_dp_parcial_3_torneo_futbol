@@ -79,6 +79,30 @@ FIN PARA
 PARA i DESDE 1 HASTA MAX_EQUIPOS HACER
     Asignar "---" a la posición m[i][i]
 FIN PARA
+
+PARA p DESDE 0 HASTA TOTAL_PARTIDOS - 1 HACER
+
+    Inicializar el índice del equipo local en -1
+    Inicializar el índice del equipo visitante en -1
+
+    PARA i DESDE 0 HASTA MAX_EQUIPOS - 1 HACER
+        SI el nombre del equipo coincide con el equipo local ENTONCES
+            Guardar su índice
+        FIN SI
+
+        SI el nombre del equipo coincide con el equipo visitante ENTONCES
+            Guardar su índice
+        FIN SI
+    FIN PARA
+    
+    SI se encontraron ambos equipos ENTONCES
+        Guardar el marcador del local contra el visitante
+        Guardar el marcador invertido del visitante contra el local
+    FIN SI
+
+FIN PARA
+
+FIN DE LA FUNCIÓN
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
