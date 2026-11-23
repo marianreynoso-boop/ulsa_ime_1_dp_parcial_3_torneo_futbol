@@ -261,16 +261,24 @@ Incluye casos normales y casos límite.
 
 | # | Duda o error | Cómo lo resolví |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [No sabia como intercambiar todos los datos de dos equipos sin cambiar solamente sus puntos.] | [Utilice una variable auxiliar de tipo Equipo para guardar temporalmente un registro completo.] |
+| 2 | [Tenia la duda de si ordenar directamente el arreglo original podia afectar otros reportes.] | [Decidi copiar los equipos a un arreglo auxiliar antes de ordenar la tabla.] |
+| 3 | [No sabia como manejar el empate en el primer lugar.] | [Primero busque la mayor cantidad de puntos y despues recorri el arreglo para guardar todos los equipos que tuvieran esos puntos.] |
 
 ## 8. Reflexión
 
 **¿Qué aprendiste?**
 
-[Inserta aquí tu respuesta]
+[Aprendi a trabajar con arreglos de registros y a ordenar informacion utilizando el metodo burbuja. Tambien entendi mejor como funcionan los apuntadores y como pueden utilizarse para modificar datos sin tener que pasar copias de los registros.
+
+Otra cosa que aprendi fue la importancia de dividir un programa en funciones, ya que esto permite que cada parte tenga una tarea especifica y sea mas facil encontrar errores.
+
+Tambien comprendi que no siempre es necesario modificar los datos originales para mostrar un reporte. En mi caso, utilizar una copia del arreglo me ayudo a conservar el orden de registro de los equipos.]
 
 **¿Qué cambiarías de tu proceso?**
 
-[Inserta aquí tu respuesta]
+[Si pudiera cambiar algo de mi proceso, empezaria por revisar con mas cuidado los registros y las funciones que ya existen en torneo.h antes de comenzar a programar.
+
+Tambien haria mas pruebas desde el principio, especialmente con los empates y las opciones invalidas, porque son casos que pueden causar errores si no se consideran desde el inicio.
+
+Creo que trabajar primero con la receta y despues pasarla a codigo me ayudo a entender mejor lo que tenia que hacer mi modulo y a organizar las funciones de una manera mas clara.]
