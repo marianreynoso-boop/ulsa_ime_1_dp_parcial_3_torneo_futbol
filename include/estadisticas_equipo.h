@@ -12,3 +12,4 @@ inline std::string aMinusculasEstadisticas(const std::string& texto) {
         );
     }
     return resultado;
+}
