@@ -57,10 +57,53 @@ int main() {
 
     switch (opcion) {
         case 1:
-        std::cout<< "Ingrese nombre del equipo a registrar: ";
-        std::cout<< "Equipo registrado con exito \n" ;
-        break;
-            case 2:
+            if (totalEquipos >= MAX_EQUIPOS) {
+                std::cout << "Error: La lista de equipos esta llena.\n";
+                break;
+            }
+
+            while (true) {
+                std::string nombreEquipo = leerCadena("Ingrese nombre del equipo a registrar: ");
+
+                if (nombreEquipo.size() < MIN_CARACTERES_NOMBRE ||
+                    nombreEquipo.size() > MAX_CARACTERES_NOMBRE) {
+                    std::cout << "Error: El nombre debe tener entre 3 y 15 caracteres.\n";
+                    continue;
+                }
+
+                bool valido = true;
+                for (int i = 0; i < (int)nombreEquipo.size(); i++) {
+                    unsigned char letra = (unsigned char)nombreEquipo[i];
+                    if (letra >= 128) {
+                        valido = false;
+                    }
+                }
+
+                if (!valido) {
+                    std::cout << "Error: El nombre no puede tener acentos ni enie.\n";
+                    continue;
+                }
+
+                bool repetido = false;
+                for (int i = 0; i < totalEquipos; i++) {
+                    if (aMinusculasEstadisticas(equipos[i].nombre) ==
+                        aMinusculasEstadisticas(nombreEquipo)) {
+                        repetido = true;
+                    }
+                }
+
+                if (repetido) {
+                    std::cout << "Error: Ese equipo ya esta registrado.\n";
+                    continue;
+                }
+
+                equipos[totalEquipos].nombre = nombreEquipo;
+                totalEquipos++;
+                std::cout << "Equipo registrado con exito.\n";
+                break;
+            }
+            break;
+        case 2:
             std::cout << "Lista de Equipos Registrados:\n"; 
             mostrarEquipos(equipos, totalEquipos); 
             std::cout<< "---Equipos Registrados--- \n" ;
