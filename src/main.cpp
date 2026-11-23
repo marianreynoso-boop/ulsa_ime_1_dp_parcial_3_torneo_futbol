@@ -53,10 +53,11 @@ int main() {
         std::cout << "8. Mostrar matriz de enfrentamientos\n";
         std::cout << "9. Salir\n";
        
-        opcion = leerEntero("Ingresa tu opcion: ");
-
+        opcion = leerEntero("Ingresa tu opcion: "); 
+                
     switch (opcion) {
         case 1:
+<<<<<<< HEAD
             if (totalEquipos >= MAX_EQUIPOS) {
                 std::cout << "Error: La lista de equipos esta llena.\n";
                 break;
@@ -104,15 +105,39 @@ int main() {
             }
             break;
         case 2:
+=======
+        std::cout<< "Ingrese nombre del equipo a registrar: ";
+         registrarEquipo(equipos, totalEquipos); 
+        std::cout<< "Equipo registrado con exito \n" ;
+        break;
+            case 2:
+>>>>>>> d308aba16a985fbdfed99080da13574c223a690d
             std::cout << "Lista de Equipos Registrados:\n"; 
             mostrarEquipos(equipos, totalEquipos); 
             std::cout<< "---Equipos Registrados--- \n" ;
             break;
                 case 3:
-                std::cout<< "Simulación de torneo \n";
-                break;
+                    simulartorneo(equipos, totalEquipos, partidos, totalPartidos, simulacionHecha);
+                    break;
                     case 4:
-                    std::cout<< "Resultados: \n";
+                    if (!simulacionHecha) {
+                        std::cout << "Primero debes simular el torneo.\n";
+                    } else {
+                        std::cout << "--- RESULTADOS DE LOS PARTIDOS ---\n";
+                        std::cout << std::left << std::setw(4) << "#"
+                                  << std::left << std::setw(17) << "LOCAL"
+                                  << std::left << std::setw(10) << "MARCADOR"
+                                  << std::left << std::setw(17) << "VISITANTE" << "\n";
+                        for (int i = 0; i < totalPartidos; i++) {
+                            std::string marcador = std::to_string(partidos[i].golesLocal)
+                                                 + " - "
+                                                 + std::to_string(partidos[i].golesVisitante);
+                            std::cout << std::left << std::setw(4) << (i + 1)
+                                      << std::left << std::setw(17) << partidos[i].local
+                                      << std::left << std::setw(10) << marcador
+                                      << std::left << std::setw(17) << partidos[i].visitante << "\n";
+                        }
+                    }
                     break;
                         case 5:
                         std::cout<< "Tabla de Posiciones: \n";
@@ -121,28 +146,9 @@ int main() {
                             std::cout<< "CAMPEON: \n";
                             break;
                                 
-                            case 7: {
-                                std::string nombreBuscado;
-                                std::cout <<"Ingrese el nombre del equipo a consultar: ";
-                                std::cin >> nombreBuscado;
-                                    
-                                    const Equipo* equipoEncontrado = buscarEquipo(equipos, totalEquipos, nombreBuscado);
-                                    if (equipoEncontrado != nullptr) {
-                                        std::cout <<"\n--- FICHA DE EQUIPO ---\n";
-                                        std::cout <<"Equipo: " <<equipoEncontrado->nombre<< "\n";
-                                        std::cout <<"Jugados: " <<equipoEncontrado->PJ<< "\n";
-                                        std::cout <<"Ganados: " <<equipoEncontrado->PG<< "\n";
-                                        std::cout <<"Empatados: " <<equipoEncontrado->PE<< "\n";
-                                        std::cout <<"Perdidos: " <<equipoEncontrado->PP<< "\n";
-                                        std::cout <<"Goles a favor: " <<equipoEncontrado->GF<< "\n";
-                                        std::cout <<"Goles en contra: " <<equipoEncontrado->GC<< "\n";
-                                        std::cout <<"Puntos: " <<equipoEncontrado->PTS<< "\n";
-                                    } else {
-                                        std::cout << "NO SE ENCONTRO NINGUN EQUIPO LLAMADO: " << nombreBuscado << "\n";
-                                    }
-                                    break;
-                                }
-
+                                case 7: {
+                                const int mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos);
+                                break;
         
         case 9:
         break;
