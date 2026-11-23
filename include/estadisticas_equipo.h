@@ -78,7 +78,8 @@ inline void acumularResultadoPartido(Equipo& equipoLocal,
     reiniciarEstadisticas(equipos, MAX_EQUIPOS);
 
     for (int p = 0; p < TOTAL_PARTIDOS; ++p) {
-            const int idxLocal = buscarIndiceEquipo(equipos, MAX_EQUIPOS, partidos[p].local);
-       const int idxVisitante = buscarIndiceEquipo(equipos, MAX_EQUIPOS, partidos[p].visitante);
+    const int idxLocal = buscarIndiceEquipo(equipos, MAX_EQUIPOS, partidos[p].local);
+    const int idxVisitante = buscarIndiceEquipo(equipos, MAX_EQUIPOS, partidos[p].visitante);
 
-   
+    if (idxLocal != -1 && idxVisitante != -1) {
+  
