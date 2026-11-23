@@ -53,11 +53,12 @@ int main() {
         std::cout << "8. Mostrar matriz de enfrentamientos\n";
         std::cout << "9. Salir\n";
        
-        opcion = leerEntero("Ingresa tu opcion: ");
-
+        opcion = leerEntero("Ingresa tu opcion: "); 
+                
     switch (opcion) {
         case 1:
         std::cout<< "Ingrese nombre del equipo a registrar: ";
+         registrarEquipo(equipos, totalEquipos); 
         std::cout<< "Equipo registrado con exito \n" ;
         break;
             case 2:
