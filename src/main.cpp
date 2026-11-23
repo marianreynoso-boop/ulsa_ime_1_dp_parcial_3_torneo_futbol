@@ -78,9 +78,9 @@ int main() {
                             std::cout<< "CAMPEON: \n";
                             break;
                                 
-                            case 7: {
+                                case 7: {
                                 const int mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos);
-
+                                break;
         
         case 9:
         break;
