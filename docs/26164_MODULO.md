@@ -3,7 +3,7 @@
 **Nombre:** [Maximiliano Muñoz Solís]  
 **Matrícula:** [26164]  
 **Módulo:** [Matriz de enfrentamientos]  
-**Archivo de código:** [Inserta aquí tu respuesta]
+**Archivo de código:** [include/matriz.h]
 
 ## 2. Propósito
 
