@@ -13,3 +13,15 @@ inline std::string aMinusculasEstadisticas(const std::string& texto) {
     }
     return resultado;
 }
+
+inline void reiniciarEstadisticas(Equipo (&equipos)[MAX_EQUIPOS], int cantidadEquipos) {
+    for (int i = 0; i < cantidadEquipos; ++i) {
+        equipos[i].PJ = 0;
+        equipos[i].PG = 0;
+        equipos[i].PE = 0;
+        equipos[i].PP = 0;
+        equipos[i].GF = 0;
+        equipos[i].GC = 0;
+        equipos[i].PTS = 0;
+    }
+}
