@@ -75,6 +75,10 @@ FIN PARA
 PARA fila DESDE 1 HASTA MAX_EQUIPOS+1 HACER
     Guardar el nombre del equipo en la posicion corresponidente
 FIN PARA
+
+PARA i DESDE 1 HASTA MAX_EQUIPOS HACER
+    Asignar "---" a la posición m[i][i]
+FIN PARA
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
