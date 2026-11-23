@@ -57,7 +57,6 @@ int main() {
                 
     switch (opcion) {
         case 1:
-<<<<<<< HEAD
             if (totalEquipos >= MAX_EQUIPOS) {
                 std::cout << "Error: La lista de equipos esta llena.\n";
                 break;
@@ -105,13 +104,6 @@ int main() {
             }
             break;
         case 2:
-=======
-        std::cout<< "Ingrese nombre del equipo a registrar: ";
-         registrarEquipo(equipos, totalEquipos); 
-        std::cout<< "Equipo registrado con exito \n" ;
-        break;
-            case 2:
->>>>>>> d308aba16a985fbdfed99080da13574c223a690d
             std::cout << "Lista de Equipos Registrados:\n"; 
             mostrarEquipos(equipos, totalEquipos); 
             std::cout<< "---Equipos Registrados--- \n" ;
