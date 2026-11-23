@@ -11,7 +11,7 @@
 #include <stdexcept>
 #include "torneo.h"
 
-inline void prepararMatriz(const Equipo Equipos[], 
+inline void prepararMatriz(const Equipo equipos[], 
                             std::string m[MAX_EQUIPOS + 1][MAX_EQUIPOS + 1]) {
 std::string abreviaturas[MAX_EQUIPOS];
 
@@ -20,5 +20,14 @@ for (int fila = 0; fila < MAX_EQUIPOS + 1; fila++) {
         m[fila][columna] = "";
     }
 }
+
+for (int i = 0; i < MAX_EQUIPOS; i++) {
+    abreviaturas[i] = equipos[i].nombre.substr(0,3);
+   
+    for (int j = 0; j < MAX_EQUIPOS; j++) {
+        abreviaturas[i][j] = toupper(abreviaturas[i][j]);
+    }
+}
+
 
 }
