@@ -40,39 +40,50 @@ Compara el nombre ingresado con los nombres del arreglo y devuelve la ubicación
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
-[Inserta aquí tu respuesta]
+1. Uso el arreglo unidimensional de registros (Equipo[]) pasándolo a las funciones para poder leer la información.
+
+2. El paso por arreglo constante (const Equipo arregloEquipos[]) porque mi módulo es de solo lectura y esto protege la información para no modificarla por accidente.
+
+3. apuntadores (const Equipo*) como tipo de retorno en la búsqueda, para devolver la ubicación exacta del equipo en lugar de crear una copia pesada de toda la estructura.
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
-[Inserta aquí tu respuesta]
+En los parámetros de ambas funciones. Y el uso de apuntadores en el retorno de la función buscarEquipo y en el main.cpp (usando el operador flecha -> para leer el resultado).
 
 **¿Qué ciclos usaste y por qué esos?**
 
-[Inserta aquí tu respuesta]
+Use el for en ambas funciones, porque ya se el límite de iteraciones que debo de hacer y es mas facil recorrer el arreglo
 
 **¿Qué constantes usaste y por qué son constantes?**
 
-[Inserta aquí tu respuesta]
+use const, son constantes porque un módulo de consulta no puede alterar ningún dato de los equipos
 
 **¿Qué funciones reutilizaste de `utilerias.h`, de `torneo.h` o de otro módulo?**
 
-[Inserta aquí tu respuesta]
+la estructura de Equipo que se definió en torneo.h
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
-[Inserta aquí tu respuesta]
+Devuelve el nullptr si al buscar, el programa no encuentra ningún nombre que coincida
 
 ## 5. Receta
 
 Tu receta en pseudocódigo, escrita antes de programar.
 
 ```
-[Inserta aquí tu respuesta]
+Función buscarEquipo(arregloEquipos, totalEquipos, nombreBuscado):
+    Para i desde 0 hasta totalEquipos - 1 hacer:
+        if arregloEquipos[i].nombre es igual a nombreBuscado entonces:
+            return la dirección de memoria de arregloEquipos[i]
+        Fin if
+    Fin for
+    return nulo (no se encontró)
+Fin 
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
 
-[Inserta aquí tu respuesta]
+Sí, al probar a mano noté que si devolvía el equipo directamente se creaba una copia. Corregí el diseño para devolver la dirección de memoria (&) y optimizar el programa.
 
 ## 6. Pruebas
 

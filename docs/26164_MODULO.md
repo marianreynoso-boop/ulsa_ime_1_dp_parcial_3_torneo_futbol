@@ -55,7 +55,26 @@ Explica cada decisión y por qué la tomaste.
 Tu receta en pseudocódigo, escrita antes de programar.
 
 ```
-[Inserta aquí tu respuesta]
+m[7][7]
+PARA fila DESDE 0 HASTA MAX_EQUIPOS HACER
+    PARA columna DESDE 0 HASTA MAX_EQUIPOS HACER
+    Asignar cadena vacia a toda la matriz
+    FIN PARA
+FIN PARA
+
+PARA i DESDE 0 HASTA MAX_EQUIPOS-1 HACER
+    Obtener primeras 3 letras del nombre
+    Convertir letras a mayuscula
+    Guardar abreviaturas en el arreglo
+FIN PARA
+
+PARA columna DESDE 1 HASTA MAX_EQUIPOS HACER
+    Guardar abreviatura en la posicion corresponidente
+FIN PARA
+
+PARA fila DESDE 1 HASTA MAX_EQUIPOS HACER
+    Guardar el nombre del equipo en la posicion corresponidente
+FIN PARA
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
