@@ -22,10 +22,10 @@ std::string abreviaturas[MAX_EQUIPOS];
     }
 
     for (int i = 0; i < MAX_EQUIPOS; i++) {
-        abreviaturas[i] = equipos[i].nombre.substr(0,3);
+        abreviaturas[i] = equipos[i].nombre.substr(0,3);    //substr elige las primeras 3 letras
    
         for (int j = 0; j < MAX_EQUIPOS; j++) {
-            abreviaturas[i][j] = toupper(abreviaturas[i][j]);
+            abreviaturas[i][j] = toupper(abreviaturas[i][j]);   //toupper convierte minuscula a mayuscula
         }
     }
 
