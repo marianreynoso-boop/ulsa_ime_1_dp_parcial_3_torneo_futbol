@@ -11,3 +11,10 @@
 #include <stdexcept>
 #include "torneo.h"
 
+inline void prepararMatriz(const Equipo Equipos[], 
+                            std::string m[MAX_EQUIPOS + 1][MAX_EQUIPOS + 1]) {
+std::string abreviaturas[MAX_EQUIPOS];
+
+
+
+}
