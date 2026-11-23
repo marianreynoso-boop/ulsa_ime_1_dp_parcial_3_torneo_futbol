@@ -1,21 +1,51 @@
 ## 1. Autor
 
-**Nombre:** [Inserta aquí tu respuesta]  
-**Matrícula:** [Inserta aquí tu respuesta]  
-**Módulo:** [Inserta aquí tu respuesta]  
-**Archivo de código:** [Inserta aquí tu respuesta]
+**Nombre:** [Gilberto Cantu]  
+**Matrícula:** [26078]  
+**Módulo:** [clasificacion y campeon ]  
+**Archivo de código:** [clasificacion_campeon.h]
 
 ## 2. Propósito
 
 ¿Qué hace tu módulo y para qué le sirve a quien usa el programa?
 
-[Inserta aquí tu respuesta]
+[Mi modulo se encarga de ordenar la tabla de posiciones del torneo de futbol y saber quien es el campeon. Para hacerlo, utilizo los puntos que obtuvo cada equipo durante los partidos y los acomodo de mayor a menor, tambien detecta cuando dos o mas equipos tienen los mismos puntos en el primer lugar. En ese caso, muestra los equipos empatados y permite que el usuario elija al campeon.
+
+Este modulo le sirve al usuario para conocer la clasificacion final del torneo de una manera clara y ordenada, sin tener que revisar los resultados de todos los partidos y calcular los puntos manualmente.]
 
 ## 3. Entradas y salidas
 
 ¿Qué recibe tu módulo (parámetros y datos del teclado) y qué produce (lo que imprime o devuelve)?
 
-[Inserta aquí tu respuesta]
+[Entradas
+
+Mi modulo recibe los siguientes datos:
+
+Un arreglo de registros de tipo Equipo, donde se encuentran los nombres y las estadisticas de los equipos.
+
+La cantidad de equipos que participan en el torneo, que en este caso son 6.
+
+Una variable que indica si el torneo ya fue simulado.
+
+La opcion que escribe el usuario cuando existe un empate en el primer lugar.
+
+Para la eleccion del campeon utilizo la funcion leerEntero() de utilerias.h, ya que todas las entradas por teclado deben realizarse mediante las funciones de esa libreria.
+
+Salidas
+
+Mi modulo produce las siguientes salidas:
+
+Una tabla de posiciones ordenada de mayor a menor por puntos.
+
+La lista de equipos que tienen la mayor cantidad de puntos.
+
+El nombre del campeon y sus puntos.
+
+Mensajes de rechazo cuando se intenta consultar la tabla o el campeon antes de simular el torneo.
+
+Un mensaje cuando el usuario selecciona una opcion que no existe al elegir al campeon.
+
+Las funciones de mi modulo no necesitan devolver una tabla, ya que los resultados se muestran directamente en pantalla.]
 
 ## 4. Decisiones de diseño
 
