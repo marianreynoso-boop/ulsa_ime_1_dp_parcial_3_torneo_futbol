@@ -23,7 +23,8 @@ Mi módulo se encarga de calcular las estadísticas de los equipos como el PJ, P
 
 ¿Qué recibe tu módulo (parámetros y datos del teclado) y qué produce (lo que imprime o devuelve)?
 
-[Inserta aquí tu respuesta]
+Recibe por parámetros el arreglo de registros equipo y el arreglo de registros Partido. 
+Modifica en memoria los campos estadísticos de cada Equipo en el arreglo recibido mediante paso por referencia.
 
 ## 4. Decisiones de diseño
 
@@ -31,7 +32,6 @@ Explica cada decisión y por qué la tomaste.
 
 **¿Qué funciones tiene tu módulo y qué tarea hace cada una?**
 
-[Inserta aquí tu respuesta]
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 

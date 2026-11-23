@@ -11,7 +11,8 @@
 #include <stdexcept>
 #include "torneo.h"
 
-inline void prepararMatriz(const Equipo equipos[], 
+inline void prepararMatriz(const Equipo equipos[],
+                            const Partido partidos[], 
                             std::string m[MAX_EQUIPOS + 1][MAX_EQUIPOS + 1]) {
 std::string abreviaturas[MAX_EQUIPOS];
 
@@ -24,7 +25,7 @@ std::string abreviaturas[MAX_EQUIPOS];
     for (int i = 0; i < MAX_EQUIPOS; i++) {
         abreviaturas[i] = equipos[i].nombre.substr(0,3);    //substr elige las primeras 3 letras
    
-        for (int j = 0; j < MAX_EQUIPOS; j++) {
+        for (int j = 0; j < 3; j++) {
             abreviaturas[i][j] = toupper(abreviaturas[i][j]);   //toupper convierte minuscula a mayuscula
         }
     }
@@ -35,6 +36,10 @@ std::string abreviaturas[MAX_EQUIPOS];
 
     for (int fila = 1; fila < MAX_EQUIPOS + 1; fila++) {
         m[fila][0] = equipos[fila - 1].nombre;
+    }
+
+    for (int i = 1; i < MAX_EQUIPOS + 1; i++) {
+        m[i][i] = "---";
     }
 
 }
