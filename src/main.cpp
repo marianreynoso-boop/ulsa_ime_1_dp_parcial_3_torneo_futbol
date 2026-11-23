@@ -19,25 +19,28 @@
 
 // TODO: incluyan aqui el archivo .h de cada modulo.
 #include "clasificacion_campeon.h"
-#include "consultas.h"
+#include "consulta.h"
 #include "escenario_prueba.h"
-
-int main(){
-    // TODO: declaren aqui los datos del torneo.
+#include "simulacion.h"
+#include "estadisticas_equipo.h"
+ // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
+int main() {
+   
     Equipo equipos[MAX_EQUIPOS];
-    int totalEquipos = 0;
-
     Partido partidos[TOTAL_PARTIDOS];
+    int totalEquipos = 0;
     int totalPartidos = 0;
+    bool simulacionHecha = false;
 
-    std::string nombre;
     std::cout << "Ingresa tu nombre: ";
-    std::cin >> nombre;
+    std::string nombre;
+    std::getline(std::cin, nombre);
     std::cout << "Hola " << nombre << "\n";
     std::cout << "Bienvenido al Sistema de Gestion del Torneo de Futbol\n";
 
     int opcion = 0;
+
     while (opcion != 9) {
         std::cout << "\nSelecciona una opcion:\n";
         std::cout << "1. Registrar Equipo\n";
@@ -49,38 +52,47 @@ int main(){
         std::cout << "7. Consultar Equipo\n";
         std::cout << "8. Mostrar matriz de enfrentamientos\n";
         std::cout << "9. Salir\n";
-        std::cout << "Ingresa tu opcion: ";
-        std::cin >> opcion;
-
-        switch (opcion) {
-            case 1:
-                registrarEquipo(equipos, totalEquipos); 
-                break;   
+       
+        opcion = leerEntero("Ingresa tu opcion: "); 
                 
+    switch (opcion) {
+        case 1:
+        std::cout<< "Ingrese nombre del equipo a registrar: ";
+         registrarEquipo(equipos, totalEquipos); 
+        std::cout<< "Equipo registrado con exito \n" ;
+        break;
             case 2:
-                std::cout << "Equipos Registrados:\n";
-                void mostrarEquipos (const std::string Equipos[], int totalEquipos );
-                std::cout<< "---Equipos Registrados--- \n" ;
+            std::cout << "Lista de Equipos Registrados:\n"; 
+            mostrarEquipos(equipos, totalEquipos); 
+            std::cout<< "---Equipos Registrados--- \n" ;
+            break;
+                case 3:
+                std::cout<< "Simulación de torneo \n";
                 break;
-            case 3:
-                std::cout << "Simulacion de torneo\n";
-                break;
-            case 9:
-                std::cout << "Saliendo del sistema...\n";
-                break;
-            default:
-                std::cout << "Opcion no valida. Intenta de nuevo.\n";
-                break;
-        }
+                    case 4:
+                    std::cout<< "Resultados: \n";
+                    break;
+                        case 5:
+                        std::cout<< "Tabla de Posiciones: \n";
+                        break;
+                            case 6:
+                            std::cout<< "CAMPEON: \n";
+                            break;
+                                
+                                case 7: {
+                                const int mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos);
+                                break;
+        
+        case 9:
+        break;
+           
     }
-
-    return 0;
+    } return 0;
 }
   
 
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
-
     // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
     //
     // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
