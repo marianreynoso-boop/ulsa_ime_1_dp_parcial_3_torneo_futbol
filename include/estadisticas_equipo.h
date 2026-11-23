@@ -85,7 +85,11 @@ inline void acumularResultadoPartido(Equipo& equipoLocal,
         acumularResultadoPartido(
             equipos[idxLocal],
             equipos[idxVisitante],
-            partidos[p]
-        )
+            partidos[p].golesLocal,
+            partidos[p].golesVisitante
+        );
+    }
+}
+   }
         
   
