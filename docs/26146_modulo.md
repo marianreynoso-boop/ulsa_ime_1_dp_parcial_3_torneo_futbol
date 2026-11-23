@@ -11,13 +11,13 @@ y llena tu copia. En equipos de cinco, el módulo 6 usa docs/modulo_6/modulo.md.
 **Nombre:** [Oliver Fernando López Pineda]  
 **Matrícula:** [26146]  
 **Módulo:** [Tabla de posiciones]  
-**Archivo de código:** [estadisticas equipo.md]
+**Archivo de código:** [estadisticas equipo.h]
 
 ## 2. Propósito
 
 ¿Qué hace tu módulo y para qué le sirve a quien usa el programa?
 
-[Inserta aquí tu respuesta]
+Mi módulo se encarga de calcular las estadísticas de los equipos como el PJ, PG, PE, PP, GF, GC y los puntos, a partir de los 15 partidos simulados. Esto sin imprimir reportes ni modificar el registro, solo deja listas las estadísticas de modo que los módulos de clasificación/campeón, consulta y matriz trabajen con los datos correctos sin tener que recalcularlos desde cero en cada consulta.
 
 ## 3. Entradas y salidas
 
