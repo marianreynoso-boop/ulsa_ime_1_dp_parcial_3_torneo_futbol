@@ -38,4 +38,8 @@ std::string abreviaturas[MAX_EQUIPOS];
         m[fila][0] = equipos[fila - 1].nombre;
     }
 
+    for (int i = 1; i < MAX_EQUIPOS + 1; i++) {
+        m[i][i] = "---";
+    }
+
 }
