@@ -50,3 +50,7 @@ inline void acumularResultadoPartido(Equipo& equipoLocal,
     equipoLocal.PJ += 1;
     equipoVisitante.PJ += 1;
 
+    equipoLocal.GF += golesLocal;
+    equipoLocal.GC += golesVisitante;
+    equipoVisitante.GF += golesVisitante;
+    equipoVisitante.GC += golesLocal;
