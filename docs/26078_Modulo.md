@@ -53,31 +53,81 @@ Explica cada decisión y por qué la tomaste.
 
 **¿Qué funciones tiene tu módulo y qué tarea hace cada una?**
 
-[Inserta aquí tu respuesta]
+[intercambiarEquipos(): recibe dos apuntadores a registros de tipo Equipo y cambia sus posiciones utilizando una variable auxiliar. Su objetivo es intercambiar todos los datos de los equipos sin perder informacion.
+
+ordenarClasificacion(): utiliza el metodo de ordenamiento burbuja para acomodar los equipos de mayor a menor segun sus puntos. Compara dos equipos consecutivos y los intercambia cuando el equipo de la izquierda tiene menos puntos.
+
+mostrarTabla(): revisa si el torneo ya fue simulado. Despues realiza una copia del arreglo original, ordena la copia y muestra la tabla de posiciones con las estadisticas de cada equipo.
+
+mostrarCampeon(): busca la mayor cantidad de puntos del torneo. Si solamente un equipo tiene esa cantidad, lo muestra como campeon. Si existe un empate, muestra los equipos empatados y pide al usuario que elija uno.]
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
-[Inserta aquí tu respuesta]
+[Mi modulo utiliza principalmente registros, arreglos y apuntadores.
+
+Utilizo el registro Equipo porque guarda toda la informacion de un equipo en un solo lugar, como su nombre, partidos jugados, ganados, empatados, perdidos, goles a favor, goles en contra y puntos. Esto evita tener que manejar muchos arreglos separados.
+
+Utilizo un arreglo de registros para almacenar y recorrer los 6 equipos del torneo. De esta manera puedo comparar sus puntos y acomodarlos en la tabla.
+
+Tambien utilizo un arreglo auxiliar para guardar una copia de los equipos antes de ordenarlos. Lo hice asi porque las instrucciones indican que los reportes de equipos, ficha y matriz deben conservar el orden de registro. Al ordenar solamente la copia, no modifico el arreglo original.
+
+En la funcion intercambiarEquipos() utilizo apuntadores de tipo Equipo*. Los apuntadores permiten acceder directamente a los registros originales y cambiar sus datos sin tener que regresar una copia.
+
+En las funciones que muestran la tabla y el campeon, recibo el arreglo de equipos como parametro. Para la tabla utilizo una copia local, mientras que para encontrar al campeon solamente consulto los puntos de los equipos.]
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
-[Inserta aquí tu respuesta]
+[Los temas asignados a mi modulo son el ordenamiento, el intercambio de registros y los apuntadores.
+
+El ordenamiento lo demuestro en la funcion ordenarClasificacion(), donde utilizo el metodo burbuja para acomodar los equipos de mayor a menor por puntos.
+
+El intercambio de registros lo demuestro en la funcion intercambiarEquipos(), donde utilizo una variable auxiliar para cambiar de lugar dos equipos completos.
+
+Los apuntadores los demuestro en la misma funcion, ya que recibe las direcciones de dos registros de tipo Equipo y permite modificar directamente sus datos.
+
+Tambien utilizo arreglos de registros, ciclos, condicionales y funciones para completar el funcionamiento de mi modulo.]
 
 **¿Qué ciclos usaste y por qué esos?**
 
-[Inserta aquí tu respuesta]
+[Utilice ciclos for para recorrer el arreglo de equipos y realizar las comparaciones necesarias para ordenar la tabla.
+
+En el ordenamiento burbuja utilizo dos ciclos for anidados. El primero controla las pasadas del ordenamiento y el segundo compara los equipos que se encuentran uno al lado del otro.
+
+Tambien utilizo ciclos for para copiar los equipos, mostrar la tabla y buscar a los equipos que tienen la mayor cantidad de puntos.
+
+En la funcion mostrarCampeon() utilizo un ciclo do while para pedir la opcion del usuario cuando existe un empate. Lo elegi porque necesito que el usuario escriba una opcion al menos una vez y que se vuelva a preguntar si su respuesta no es valida.]
 
 **¿Qué constantes usaste y por qué son constantes?**
 
-[Inserta aquí tu respuesta]
+[Utilizo la constante MAX_EQUIPOS, que representa la cantidad maxima de equipos que pueden participar en el torneo.
+
+En este proyecto su valor es 6, porque las reglas indican que participan 6 equipos y se juegan 15 partidos.
+
+La utilizo para declarar el arreglo auxiliar y para limitar la cantidad de equipos que se recorren. Es una constante porque el numero de equipos no cambia durante la ejecucion del programa.
+
+Tambien utilizo la constante MAX_EQUIPOS en lugar de escribir el numero 6 directamente, para que el codigo sea mas claro y facil de modificar si en otro proyecto cambia la cantidad de participantes.]
 
 **¿Qué funciones reutilizaste de `utilerias.h`, de `torneo.h` o de otro módulo?**
 
-[Inserta aquí tu respuesta]
+[Reutilizo la funcion leerEntero() de utilerias.h para pedir al usuario que elija al campeon cuando existe un empate.
+
+Tambien utilizo el registro Equipo y la constante MAX_EQUIPOS que se encuentran en torneo.h, ya que son parte de las estructuras comunes del proyecto.]
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
-[Inserta aquí tu respuesta]
+[Si el usuario intenta mostrar la tabla antes de simular el torneo, muestra:
+
+Primero debes simular el torneo.
+
+Si el usuario intenta consultar al campeon antes de simular el torneo, muestra:
+
+Primero debes simular el torneo.
+
+Si existe un empate en el primer lugar y el usuario escribe una opcion menor que 1 o mayor que la cantidad de equipos empatados, muestra:
+
+Opcion invalida. Intenta de nuevo.
+
+Despues vuelve a pedir la opcion hasta que el usuario escriba una valida.]
 
 ## 5. Receta
 
