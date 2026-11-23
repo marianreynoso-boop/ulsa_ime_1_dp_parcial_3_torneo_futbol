@@ -23,6 +23,7 @@ Mi módulo se encarga de calcular las estadísticas de los equipos como el PJ, P
 
 ¿Qué recibe tu módulo (parámetros y datos del teclado) y qué produce (lo que imprime o devuelve)?
 
+
 [Inserta aquí tu respuesta]
 
 ## 4. Decisiones de diseño
