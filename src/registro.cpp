@@ -1,3 +1,5 @@
+#include <iostream> 
+#include "registro.h"
 void registrarEquipo(Equipo arregloEquipos[], int &totalEquipos)  { 
 if (totalEquipos >= MAX_EQUIPOS) { 
 std::cout << "Error: El torneo esta lleno. Maximo de equipos alcanzado.\n"; 
@@ -24,5 +26,4 @@ arregloEquipos[totalEquipos].GC = 0;  // Goles en Contra
 arregloEquipos[totalEquipos].DIF = 0; // Diferencia de Goles 
     
 totalEquipos++; 
-std::cout << "\n¡Equipo '" << nuevoNombre << "' registrado con 
-exito!\n";
+std::cout << "\n¡Equipo '" << nuevoNombre << "' registrado con exito!\n";
