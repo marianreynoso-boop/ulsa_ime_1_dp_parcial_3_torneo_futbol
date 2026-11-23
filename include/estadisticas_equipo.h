@@ -25,3 +25,18 @@ inline void reiniciarEstadisticas(Equipo (&equipos)[MAX_EQUIPOS], int cantidadEq
         equipos[i].PTS = 0;
     }
 }
+
+inline int buscarIndiceEquipo(const Equipo (&equipos)[MAX_EQUIPOS],
+                                int cantidadEquipos,
+                                const std::string& nombreBuscado) {
+    const std::string objetivo = aMinusculasEstadisticas(nombreBuscado);
+
+    for (int i = 0; i < cantidadEquipos; ++i) {
+        if (aMinusculasEstadisticas(equipos[i].nombre) == objetivo) {
+          
+        }
+    }
+
+    return -1;
+}
+
