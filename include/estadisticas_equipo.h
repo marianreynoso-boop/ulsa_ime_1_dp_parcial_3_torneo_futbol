@@ -13,9 +13,10 @@ inline std::string aMinusculasEstadisticas(const std::string& texto) {
     }
     return resultado;
 }
-
+//para reiniciar las estads d los equipos:
 inline void reiniciarEstadisticas(Equipo (&equipos)[MAX_EQUIPOS], int cantidadEquipos) {
     for (int i = 0; i < cantidadEquipos; ++i) {
+       
         equipos[i].PJ = 0;
         equipos[i].PG = 0;
         equipos[i].PE = 0;
@@ -23,6 +24,7 @@ inline void reiniciarEstadisticas(Equipo (&equipos)[MAX_EQUIPOS], int cantidadEq
         equipos[i].GF = 0;
         equipos[i].GC = 0;
         equipos[i].PTS = 0;
+
     }
 }
 
@@ -39,4 +41,12 @@ inline int buscarIndiceEquipo(const Equipo (&equipos)[MAX_EQUIPOS],
 
     return -1;
 }
+
+
+inline void acumularResultadoPartido(Equipo& equipoLocal,
+                                   Equipo& equipoVisitante,
+                                   int golesLocal,
+                                   int golesVisitante) {
+    equipoLocal.PJ += 1;
+    equipoVisitante.PJ += 1;
 
