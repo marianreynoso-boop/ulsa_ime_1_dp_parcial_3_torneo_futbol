@@ -67,9 +67,10 @@ inline void acumularResultadoPartido(Equipo& equipoLocal,
         equipoLocal.PP += 1;
         equipoLocal.PTS += PUNTOS_DERROTA;
     } else if {
-        equipolocal.PE += Puntos_empate;
+        equipolocal.PE += PUNTOS_EMPATE;
         equipoVisitante += 1;
         equipoVisitante.PTS += PUNTOS_EMPATE;
     }
  }
                             
+ 
