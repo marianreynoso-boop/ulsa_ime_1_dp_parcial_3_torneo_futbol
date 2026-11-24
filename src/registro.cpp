@@ -12,7 +12,6 @@ std::cout << "Ingresa el nombre del nuevo equipo: ";
 std::string nuevoNombre; 
 
   
-std::cin.ignore();  
 std::getline(std::cin, nuevoNombre);
 
 arregloEquipos[totalEquipos].nombre = nuevoNombre; 

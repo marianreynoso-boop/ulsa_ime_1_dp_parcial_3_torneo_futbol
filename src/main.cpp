@@ -58,14 +58,11 @@ int main() {
                 
     switch (opcion) {
         case 1:
-        std::cout<< "Ingrese nombre del equipo a registrar: ";
         registrarEquipo(equipos, totalEquipos); 
-        std::cout<< "Equipo registrado con exito \n" ;
         break;
             case 2:
             std::cout << "Lista de Equipos Registrados:\n"; 
             mostrarEquipos(equipos, totalEquipos); 
-            std::cout<< "---Equipos Registrados--- \n" ;
             break;
                 case 3:
                 std::cout<< "Simulacion de torneo \n";
