@@ -44,9 +44,9 @@ inline int buscarIndiceEquipo(const Equipo (&equipos)[MAX_EQUIPOS],
 
 
 inline void acumularResultadoPartido(Equipo& equipoLocal,
-                                   Equipo& equipoVisitante,
-                                   int golesLocal,
-                                   int golesVisitante) {
+    Equipo& equipoVisitante,
+    int golesLocal,
+    int golesVisitante) {
     equipoLocal.PJ += 1;
     equipoVisitante.PJ += 1;
 
