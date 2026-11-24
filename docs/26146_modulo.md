@@ -68,35 +68,96 @@ No aplica
 
 ## 5. Receta
 
+FUNCION reiniciarEstadisticas(equipos, cantidadEquipos)
+  PARA i desde 0 hasta cantidadEquipos - 1
+    equipos[i].PJ <- 0
+    equipos[i].PG <- 0
+    equipos[i].PE <- 0
+    equipos[i].PP <- 0
+    equipos[i].GF <- 0
+    equipos[i].GC <- 0
+    equipos[i].PTS <- 0
+  FIN PARA
+FIN FUNCION
+
+FUNCION acumularResultadoPartido(equipoLocal, equipoVisitante, golesLocal, golesVisitante)
+  equipoLocal.PJ <- equipoLocal.PJ + 1
+  equipoVisitante.PJ <- equipoVisitante.PJ + 1
+  equipoLocal.GF <- equipoLocal.GF + golesLocal
+  equipoLocal.GC <- equipoLocal.GC + golesVisitante
+  equipoVisitante.GF <- equipoVisitante.GF + golesVisitante
+  equipoVisitante.GC <- equipoVisitante.GC + golesLocal
+
+  SI golesLocal > golesVisitante
+    equipoLocal.PG <- equipoLocal.PG + 1
+    equipoLocal.PTS <- equipoLocal.PTS + PUNTOS_VICTORIA
+    equipoVisitante.PP <- equipoVisitante.PP + 1
+    equipoVisitante.PTS <- equipoVisitante.PTS + PUNTOS_DERROTA
+  SINO SI golesLocal < golesVisitante
+    equipoVisitante.PG <- equipoVisitante.PG + 1
+    equipoVisitante.PTS <- equipoVisitante.PTS + PUNTOS_VICTORIA
+    equipoLocal.PP <- equipoLocal.PP + 1
+    equipoLocal.PTS <- equipoLocal.PTS + PUNTOS_DERROTA
+  SINO
+    equipoLocal.PE <- equipoLocal.PE + 1
+    equipoLocal.PTS <- equipoLocal.PTS + PUNTOS_EMPATE
+    equipoVisitante.PE <- equipoVisitante.PE + 1
+    equipoVisitante.PTS <- equipoVisitante.PTS + PUNTOS_EMPATE
+  FIN SI
+FIN FUNCION
+
+FUNCION calcularEstadisticasEquipos(equipos, partidos)
+  reiniciarEstadisticas(equipos, MAX_EQUIPOS)
+
+  PARA p desde 0 hasta TOTAL_PARTIDOS - 1
+    idxLocal <- buscarIndiceEquipo(equipos, MAX_EQUIPOS, partidos[p].local)
+    idxVisitante <- buscarIndiceEquipo(equipos, MAX_EQUIPOS, partidos[p].visitante)
+
+    SI idxLocal != -1 Y idxVisitante != -1
+      acumularResultadoPartido(equipos[idxLocal], equipos[idxVisitante], partidos[p].golesLocal, partidos[p].golesVisitante)
+    FIN SI
+  FIN PARA
+FIN FUNCION
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
 
-[Inserta aquí tu respuesta]
+si
 
 ## 6. Pruebas
 
 Incluye casos normales y casos límite.
 
-| # | Qué probaste | Entrada | Resultado esperado | Resultado obtenido |
-| --- | --- | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+Partido ganado por el local
+Local: 3 goles, Visitante: 1 gol
+Local: PJ+1, PG+1, GF+3, GC+1, PTS+3; Visitante: PJ+1, PP+1, GF+1, GC+3, PTS+0
+[Anota aquí lo que obtuviste al ejecutar]
+2
+Empate sin goles (caso límite 0-0)
+Local: 0 goles, Visitante: 0 goles
+Ambos: PJ+1, PE+1, GF+0, GC+0, PTS+1
+[Anota aquí lo que obtuviste al ejecutar]
+3
+Marcador alto / goleada (caso límite 5-0)
+Local: 5 goles, Visitante: 0 goles
+Local: PG+1, GF+5, GC+0, PTS+3; Visitante: PP+1, GF+0, GC+5, PTS+0
+[Anota aquí lo que obtuviste al ejecutar]
+4
+Recálculo / limpieza previa de estadísticas
+Equipos con contadores previos distintos de 0 antes de calcular
+Todos los contadores se reinician en 0 antes de sumar los partidos
+[Anota aquí lo que obtuviste al ejecutar]
 
 ## 7. Bitácora de dudas y errores
 
-| # | Duda o error | Cómo lo resolví |
-| --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+Dudar si el Módulo 3 debía imprimir la tabla o usar apuntadores
+Se revisó el diseño del módulo: el Módulo 3 solo calcula estadísticas mediante funciones y paso por referencia sin imprimir reportes
 
 ## 8. Reflexión
 
 **¿Qué aprendiste?**
 
-[Inserta aquí tu respuesta]
+Aprendí a separar responsabilidades en funciones pequeñas y enfocadas en una sola tarea, a utilizar el paso por referencia para modificar registros de manera clara sin recurrir a variables globales, y a mantener la coherencia entre los módulos de un proyecto en C++.
 
 **¿Qué cambiarías de tu proceso?**
 
-[Inserta aquí tu respuesta]
+El órden de hacer las cosas y organizar de mejor forma mi tiempo ya que con diversos proyectos pendientes el tiempo es dificil de administrar.
