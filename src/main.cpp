@@ -23,6 +23,7 @@
 #include "escenario_prueba.h"
 #include "simulacion.h"
 #include "estadisticas_equipo.h"
+#include "registro.h"
  // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
 int main() {
@@ -30,8 +31,8 @@ int main() {
     Equipo equipos[MAX_EQUIPOS];
     Partido partidos[TOTAL_PARTIDOS];
     int totalEquipos = 0;
-    int totalPartidos = 0;
-    bool simulacionHecha = false;
+   // int totalPartidos = 0;
+   // bool simulacionHecha = false;
 
     std::cout << "Ingresa tu nombre: ";
     std::string nombre;
@@ -57,17 +58,14 @@ int main() {
                 
     switch (opcion) {
         case 1:
-        std::cout<< "Ingrese nombre del equipo a registrar: ";
-         registrarEquipo(equipos, totalEquipos); 
-        std::cout<< "Equipo registrado con exito \n" ;
+        registrarEquipo(equipos, totalEquipos); 
         break;
             case 2:
             std::cout << "Lista de Equipos Registrados:\n"; 
             mostrarEquipos(equipos, totalEquipos); 
-            std::cout<< "---Equipos Registrados--- \n" ;
             break;
                 case 3:
-                std::cout<< "Simulación de torneo \n";
+                std::cout<< "Simulacion de torneo \n";
                 break;
                     case 4:
                     std::cout<< "Resultados: \n";
@@ -79,17 +77,16 @@ int main() {
                             std::cout<< "CAMPEON: \n";
                             break;
                                 
-                                case 7: {
-                                const int mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos);
+                                case 7: 
+                                mostrarFichaEquipo(equipos, totalEquipos);
                                 break;
-        
-        case 9:
-        break;
-           
-    }
-    } return 0;
-}
-  
+
+                                    case 9:
+                                    break;
+            } //cierra el switch
+    } //cierra el while
+    return 0;
+} //cierra el int main
 
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
