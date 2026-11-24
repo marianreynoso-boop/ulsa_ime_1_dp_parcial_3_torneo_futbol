@@ -23,6 +23,7 @@
 #include "escenario_prueba.h"
 #include "simulacion.h"
 #include "estadisticas_equipo.h"
+#include "registro.h"
  // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
 int main() {
