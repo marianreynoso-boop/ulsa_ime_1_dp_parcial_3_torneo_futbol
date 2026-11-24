@@ -27,3 +27,4 @@ arregloEquipos[totalEquipos].DIF = 0; // Diferencia de Goles
     
 totalEquipos++; 
 std::cout << "\n¡Equipo '" << nuevoNombre << "' registrado con exito!\n";
+}

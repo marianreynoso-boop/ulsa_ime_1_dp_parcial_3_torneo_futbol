@@ -46,6 +46,7 @@ struct Equipo{
    int GF = 0;
    int GC = 0;
    int PTS = 0;
+   int DIF = 0;
 };
 
 struct Partido {
