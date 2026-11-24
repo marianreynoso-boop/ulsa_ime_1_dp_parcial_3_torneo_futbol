@@ -18,7 +18,7 @@ const Equipo* buscarEquipo(const Equipo arregloEquipos[], int totalEquipos, std:
     }
     return nullptr;
 }
-const int mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos){
+int mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos){
     std::string nombreBuscado;
     std::cout <<"Ingrese el nombre del equipo a consultar: ";
     std::cin >> nombreBuscado;
