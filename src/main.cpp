@@ -24,6 +24,7 @@
 #include "simulacion.h"
 #include "estadisticas_equipo.h"
 #include "registro.h"
+#include "matriz.h"
  // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
 int main() {
@@ -80,6 +81,7 @@ int main() {
                                 case 7: 
                                 mostrarFichaEquipo(equipos, totalEquipos);
                                 break;
+
 
                                     case 9:
                                     break;
