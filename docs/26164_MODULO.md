@@ -136,6 +136,36 @@ INICIO consultarMatriz
 
     Llamar a mostrarMatriz(matriz)
 
+
+    INICIALIZAR mayorGoles con los goles a favor del primer equipo
+
+    INICIALIZAR menorGolesContra con los goles en contra del primer equipo
+
+    INICIALIZAR indiceAtaque en 0
+    INICIALIZAR indiceDefensa en 0
+
+    PARA i DESDE 1 HASTA MAX_EQUIPOS - 1
+
+        SI GF del equipo actual > mayorGoles ENTONCES
+            ACTUALIZAR mayorGoles
+            GUARDAR indiceAtaque
+        FIN SI
+
+        SI GC del equipo actual < menorGolesContra ENTONCES
+            ACTUALIZAR menorGolesContra
+            GUARDAR indiceDefensa
+        FIN SI
+
+    FIN PARA
+
+    MOSTRAR nombre del equipo con mejor ataque
+    MOSTRAR mayorGoles
+
+    MOSTRAR nombre del equipo con mejor defensa
+    MOSTRAR menorGolesContra
+
+FIN
+
 FIN consultarMatriz
 ```
 

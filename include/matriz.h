@@ -99,4 +99,31 @@ inline void consultarMatriz(const Equipo equipos[],
     prepararMatriz(equipos, partidos, matriz);
 
     mostrarMatriz(matriz);
+
+    int mayorGoles = equipos[0].GF;
+    int menorGolesContra = equipos[0].GC;
+
+    int indiceAtaque = 0;
+    int indiceDefensa = 0;
+
+    for (int i = 1; i < MAX_EQUIPOS; i++) {
+
+        if (equipos[i].GF > mayorGoles) {
+            mayorGoles = equipos[i].GF;
+            indiceAtaque = i;
+        }
+
+        if (equipos[i].GC < menorGolesContra) {
+            menorGolesContra = equipos[i].GC;
+            indiceDefensa = i;
+        }
+    }
+
+    std::cout << "\nMejor ataque: "
+          << equipos[indiceAtaque].nombre
+          << " (" << mayorGoles << " goles a favor)\n";
+
+    std::cout << "Mejor defensa: "
+          << equipos[indiceDefensa].nombre
+          << " (" << menorGolesContra << " goles en contra)\n";
 }
