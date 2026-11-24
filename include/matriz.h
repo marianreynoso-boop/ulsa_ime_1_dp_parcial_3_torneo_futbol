@@ -67,6 +67,20 @@ std::string abreviaturas[MAX_EQUIPOS];
                 std::to_string(partidos[p].golesVisitante) + "-" + std::to_string(partidos[p].golesLocal);
         }
     }
+}
 
-    
+inline void mostrarMatriz(const std::string m[MAX_EQUIPOS + 1][MAX_EQUIPOS + 1]) {
+
+    std::cout << "\n--- MATRIZ DE ENFRENTAMIENTOS ---\n";
+
+    for (int fila = 0; fila < MAX_EQUIPOS + 1; fila++) {
+
+        for (int columna = 0; columna < MAX_EQUIPOS + 1; columna++) {
+
+            std::cout << std::left << std::setw(15) << m[fila][columna];
+
+        }
+
+        std::cout << std::endl;
+    }
 }
