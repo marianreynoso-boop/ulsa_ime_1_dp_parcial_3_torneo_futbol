@@ -42,23 +42,25 @@ calcularEstadisticasEquipos`: coordina el proceso completo llamando primero a `r
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
-
+Usa registros (`struct Equipo` y `struct Partido`) y arreglos (`Equipo[MAX_EQUIPOS]` y `Partido[TOTAL_PARTIDOS]`) para agrupar los datos del torneo sin recurrir a variables globales ni arreglos paralelos. Los arreglos de `Equipo` y los `Equipo` individuales que se modifican se pasan por referencia (`&`) para reflejar los cambios directamente en la estructura original; los arreglos/cadenas de solo lectura se pasan como `const` / `const&`, y los valores enteros como goles o cantidades se pasan por valor.
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
-[Inserta aquí tu respuesta]
+En la división del cálculo en funciones pequeñas de una sola responsabilidad y en el uso de paso por referencia (`&`) en `reiniciarEstadisticas`, `acumularResultadoPartido` y `calcularEstadisticasEquipos` para actualizar los campos de `Equipo`.
 
 **¿Qué ciclos usaste y por qué esos?**
 
-[Inserta aquí tu respuesta]
+Usé ciclos `for` con límite conocido (`cantidadEquipos`, `TOTAL_PARTIDOS` y el tamaño de la cadena al pasar a minúsculas), porque tanto el número de equipos como el total de partidos del torneo son fijos y conocidos de antemano.
 
 **¿Qué constantes usaste y por qué son constantes?**
 
-[Inserta aquí tu respuesta]
+Usé `MAX_EQUIPOS`, `TOTAL_PARTIDOS`, `PUNTOS_VICTORIA`, `PUNTOS_EMPATE` y `PUNTOS_DERROTA` definidas en `include/torneo.h`. Son constantes porque representan reglas y tamaños fijos del torneo que no deben alterarse en ejecución y evitan usar números mágicos en el código.
+
+
 
 **¿Qué funciones reutilizaste de `utilerias.h`, de `torneo.h` o de otro módulo?**
 
-[Inserta aquí tu respuesta]
+Reutilicé las constantes y definiciones de los registros `Equipo` y `Partido` declaradas en `include/torneo.h`.
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
