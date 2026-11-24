@@ -32,10 +32,17 @@ Explica cada decisión y por qué la tomaste.
 
 **¿Qué funciones tiene tu módulo y qué tarea hace cada una?**
 
+MinusculasEstadisticas`: convierte una cadena a minúsculas para comparar nombres de equipos sin distinguir mayúsculas ni minúsculas.
+reiniciarEstadisticas`: pone en `0` los contadores (`PJ`, `PG`, `PE`, `PP`, `GF`, `GC`, `PTS`) de cada equipo antes de calcular.
+buscarIndiceEquipo`: localiza el índice del equipo en el arreglo a partir de su nombre (o devuelve `-1` si no lo encuentra).
+acumularResultadoPartido`: actualiza `PJ`, `GF`, `GC`, `PG`/`PE`/`PP` y `PTS` del equipo local y visitante según el marcador del partido.
+calcularEstadisticasEquipos`: coordina el proceso completo llamando primero a `reiniciarEstadisticas` y luego recorriendo los partidos para acumular sus resultados.
+
+
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
-[Inserta aquí tu respuesta]
+
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
