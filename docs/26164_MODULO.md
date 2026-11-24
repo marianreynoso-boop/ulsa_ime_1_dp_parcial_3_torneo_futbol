@@ -122,6 +122,21 @@ FUNCIÓN mostrarMatriz(m)
     FIN PARA
 
 FIN FUNCIÓN
+
+INICIO consultarMatriz
+
+    SI simulacionHecha es FALSO ENTONCES
+        Mostrar "Primero debes simular el torneo"
+        TERMINAR función
+    FIN SI
+
+    Declarar matriz[MAX_EQUIPOS + 1][MAX_EQUIPOS + 1]
+
+    Llamar a prepararMatriz(equipos, partidos, matriz)
+
+    Llamar a mostrarMatriz(matriz)
+
+FIN consultarMatriz
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
