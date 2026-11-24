@@ -31,8 +31,8 @@ int main() {
     Equipo equipos[MAX_EQUIPOS];
     Partido partidos[TOTAL_PARTIDOS];
     int totalEquipos = 0;
-    int totalPartidos = 0;
-    bool simulacionHecha = false;
+   // int totalPartidos = 0;
+   // bool simulacionHecha = false;
 
     std::cout << "Ingresa tu nombre: ";
     std::string nombre;
@@ -81,7 +81,7 @@ int main() {
                             break;
                                 
                                 case 7: {
-                                const int mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos);
+                                int mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos);
                                 break;
         
         case 9:
