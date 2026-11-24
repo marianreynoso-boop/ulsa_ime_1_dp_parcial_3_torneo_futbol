@@ -103,6 +103,25 @@ PARA p DESDE 0 HASTA TOTAL_PARTIDOS - 1 HACER
 FIN PARA
 
 FIN DE LA FUNCIÓN
+
+FUNCIÓN mostrarMatriz(m)
+
+    Mostrar título "MATRIZ DE ENFRENTAMIENTOS"
+
+    PARA fila DESDE 0 HASTA MAX_EQUIPOS HACER
+
+        PARA columna DESDE 0 HASTA MAX_EQUIPOS HACER
+
+            Mostrar m[fila][columna] con alineación a la izquierda
+            y un espacio de ancho fijo
+
+        FIN PARA
+
+        Saltar a la siguiente línea
+
+    FIN PARA
+
+FIN FUNCIÓN
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
