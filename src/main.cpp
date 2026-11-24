@@ -68,7 +68,7 @@ int main() {
             std::cout<< "---Equipos Registrados--- \n" ;
             break;
                 case 3:
-                std::cout<< "Simulación de torneo \n";
+                std::cout<< "Simulacion de torneo \n";
                 break;
                     case 4:
                     std::cout<< "Resultados: \n";
@@ -81,7 +81,7 @@ int main() {
                             break;
                                 
                                 case 7: {
-                                int mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos);
+                                void mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos);
                                 break;
         
         case 9:
