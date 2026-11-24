@@ -64,15 +64,10 @@ Reutilicé las constantes y definiciones de los registros `Equipo` y `Partido` d
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
-[Inserta aquí tu respuesta]
+No aplica
 
 ## 5. Receta
 
-Tu receta en pseudocódigo, escrita antes de programar.
-
-```
-[Inserta aquí tu respuesta]
-```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
 
