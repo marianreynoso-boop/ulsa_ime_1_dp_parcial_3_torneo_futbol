@@ -70,7 +70,7 @@ int main() {
                 calcularEstadisticasEquipos(equipos, partidos);
                 break;
                     case 4:
-                    std::cout<< "Resultados: \n";
+                    mostrarResultados(partidos, totalPartidos, simulacionHecha);
                     break;
                         case 5:
                         std::cout<< "Tabla de Posiciones: \n";

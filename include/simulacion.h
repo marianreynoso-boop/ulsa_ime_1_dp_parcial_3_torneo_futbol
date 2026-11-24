@@ -77,6 +77,27 @@ inline bool simulartorneo(Equipo (&equipos)[MAX_EQUIPOS],
              << left << setw(10) << marcador
              << left << setw(17) << partidos[i].visitante << "\n";
     }
+}
 
-    return true;
+inline void mostrarResultados(const Partido (&partidos)[TOTAL_PARTIDOS], int numPartidos, bool yasimulado) {
+    if (!yasimulado) {
+                std::cout << "Error: Primero debes simular el torneo \n";
+                return;
+            } 
+                std::cout << "\n--- RESULTADOS DE LOS PARTIDOS ---\n";
+                std::cout << std::left << std::setw(4) << "#"
+                          << std::left << std::setw(17) << "LOCAL"
+                          << std::left << std::setw(10) << "MARCADOR"
+                          << std::left << std::setw(17) << "VISITANTE" << "\n";
+
+                for (int i = 0; i < numPartidos; i++) {
+                    std::string marcador = std::to_string(partidos[i].golesLocal)
+                                         + " - "
+                                         + std::to_string(partidos[i].golesVisitante);
+
+                    std::cout << std::left << std::setw(4) << (i + 1)
+                              << std::left << std::setw(17) << partidos[i].local
+                              << std::left << std::setw(10) << marcador
+                              << std::left << std::setw(17) << partidos[i].visitante << "\n";
+                }
 }
