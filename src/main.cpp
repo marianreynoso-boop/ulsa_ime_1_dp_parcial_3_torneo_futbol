@@ -77,17 +77,16 @@ int main() {
                             std::cout<< "CAMPEON: \n";
                             break;
                                 
-                                case 7: {
-                                void mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos);
+                                case 7: 
+                                mostrarFichaEquipo(equipos, totalEquipos);
                                 break;
-        
-        case 9:
-        break;
-           
-    }
-    } return 0;
-}
-}
+
+                                    case 9:
+                                    break;
+            } //cierra el switch
+    } //cierra el while
+    return 0;
+} //cierra el int main
 
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
