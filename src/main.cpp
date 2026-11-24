@@ -67,6 +67,8 @@ int main() {
             break;
                 case 3:
                 std::cout<< "Simulacion de torneo \n";
+                calcularEstadisticasEquipos(equipos, partidos);
+                break;
                 break;
                     case 4:
                     std::cout<< "Resultados: \n";
