@@ -18,7 +18,7 @@ const Equipo* buscarEquipo(const Equipo arregloEquipos[], int totalEquipos, std:
     }
     return nullptr;
 }
-int mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos){
+void mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos){
     std::string nombreBuscado;
     std::cout <<"Ingrese el nombre del equipo a consultar: ";
     std::cin >> nombreBuscado;
@@ -38,4 +38,4 @@ if (equipoEncontrado != nullptr) {
     } else {
  std::cout << "NO SE ENCONTRO NINGUN EQUIPO LLAMADO: " << nombreBuscado << "\n";
     }
-}
+} 

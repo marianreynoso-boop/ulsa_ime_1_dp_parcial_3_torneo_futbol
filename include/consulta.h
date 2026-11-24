@@ -10,4 +10,4 @@ void mostrarEquipos(const Equipo arregloEquipos[], int totalEquipos);
 
 const Equipo* buscarEquipo(const Equipo arregloEquipos[], int totalEquipos, std::string nombreBuscado);
 
-int mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos);
+void mostrarFichaEquipo(const Equipo arregloEquipos[], int totalEquipos);
