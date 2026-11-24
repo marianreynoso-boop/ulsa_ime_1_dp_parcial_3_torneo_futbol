@@ -82,9 +82,11 @@ int main() {
                                 case 7: 
                                 mostrarFichaEquipo(equipos, totalEquipos);
                                 break;
-
-                                    case 9:
+                                    case 8:
+                                    consultarMatriz(equipos, partidos, simulacionHecha);
                                     break;
+                                        case 9:
+                                        break;
             } //cierra el switch
     } //cierra el while
     return 0;
