@@ -24,6 +24,7 @@
 #include "simulacion.h"
 #include "estadisticas_equipo.h"
 #include "registro.h"
+#include "matriz.h"
  // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
 int main() {
