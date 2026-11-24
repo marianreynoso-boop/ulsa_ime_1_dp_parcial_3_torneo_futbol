@@ -84,3 +84,19 @@ inline void mostrarMatriz(const std::string m[MAX_EQUIPOS + 1][MAX_EQUIPOS + 1])
         std::cout << std::endl;
     }
 }
+
+inline void consultarMatriz(const Equipo equipos[],
+                            const Partido partidos[],
+                            bool simulacionHecha) {
+
+    if (!simulacionHecha) {
+        std::cout << "Primero debes simular el torneo.\n";
+        return;
+    }
+
+    std::string matriz[MAX_EQUIPOS + 1][MAX_EQUIPOS + 1];
+
+    prepararMatriz(equipos, partidos, matriz);
+
+    mostrarMatriz(matriz);
+}
