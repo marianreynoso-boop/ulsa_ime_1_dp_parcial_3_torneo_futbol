@@ -24,7 +24,6 @@
 #include "simulacion.h"
 #include "estadisticas_equipo.h"
 #include "registro.h"
-#include "matriz.h"
  // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
 int main() {
@@ -32,8 +31,8 @@ int main() {
     Equipo equipos[MAX_EQUIPOS];
     Partido partidos[TOTAL_PARTIDOS];
     int totalEquipos = 0;
-   // int totalPartidos = 0;
-   // bool simulacionHecha = false;
+   int totalPartidos = 0;
+   bool simulacionHecha = false;
 
     std::cout << "Ingresa tu nombre: ";
     std::string nombre;
@@ -67,6 +66,7 @@ int main() {
             break;
                 case 3:
                 std::cout<< "Simulacion de torneo \n";
+                simulartorneo(equipos, totalEquipos, partidos, totalPartidos, simulacionHecha);
                 break;
                     case 4:
                     std::cout<< "Resultados: \n";
@@ -81,7 +81,6 @@ int main() {
                                 case 7: 
                                 mostrarFichaEquipo(equipos, totalEquipos);
                                 break;
-
 
                                     case 9:
                                     break;
