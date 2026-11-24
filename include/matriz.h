@@ -42,4 +42,31 @@ std::string abreviaturas[MAX_EQUIPOS];
         m[i][i] = "---";
     }
 
+    for (int p = 0; p < TOTAL_PARTIDOS; p++) {
+
+    int indiceLocal = -1; //se inicia en -1 por el recorrido de arreglos
+    int indiceVisitante = -1;
+
+        for (int i = 0; i < MAX_EQUIPOS; i++) {
+
+            if (equipos[i].nombre == partidos[p].local) {
+                indiceLocal = i;
+            }
+
+            if (equipos[i].nombre == partidos[p].visitante) {
+                indiceVisitante = i;
+            }
+        }
+
+        if (indiceLocal != -1 && indiceVisitante != -1) {
+
+            m[indiceLocal + 1][indiceVisitante + 1] =
+                std::to_string(partidos[p].golesLocal) + "-" + std::to_string(partidos[p].golesVisitante);
+
+            m[indiceVisitante + 1][indiceLocal + 1] =
+                std::to_string(partidos[p].golesVisitante) + "-" + std::to_string(partidos[p].golesLocal);
+        }
+    }
+
+    
 }
