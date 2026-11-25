@@ -74,7 +74,33 @@ Se utiliza esta estructura porque permite almacenar los resultados de todos los 
 
 Escriban las decisiones que el equipo tomó y que el cálculo a mano necesita. Por ejemplo: cómo se obtiene la abreviatura y qué pasa si dos se repiten.
 
-[Inserta aquí tu respuesta]
+[El torneo cuenta con 6 equipos participantes.
+
+Cada equipo juega una vez contra los otros 5 equipos.
+
+En total se realizan 15 partidos.
+
+Los goles de cada partido se generan de manera aleatoria.
+
+Si un equipo gana, recibe 3 puntos.
+
+Si un partido termina empatado, cada equipo recibe 1 punto.
+
+Si un equipo pierde, recibe 0 puntos.
+
+La clasificacion se ordena de mayor a menor cantidad de puntos.
+
+Si dos o mas equipos terminan con los mismos puntos en el primer lugar, el programa muestra los equipos empatados y permite elegir al campeon.
+
+El mejor ataque es el equipo que anota mas goles durante el torneo.
+
+La mejor defensa es el equipo que recibe menos goles.
+
+La tabla de posiciones se muestra ordenada, pero los equipos conservan su orden original de registro para las consultas y otros reportes.
+
+Para registrar un equipo se solicita su nombre y se obtiene una abreviatura de tres letras.
+
+Si dos equipos tienen la misma abreviatura, se debe revisar y resolver la repeticion para que puedan distinguirse correctamente.]
 
 ## 6. Equipos del escenario
 
