@@ -13,7 +13,7 @@ Dentro de un equipo no puede haber dos propuestas iguales.
 Propuesta de mejora elaborada por: Oliver Fernando López Pineda
 
 **Matrícula:** 26146
-**Título de la propuesta:** 
+**Título de la propuesta:** Símbolos de los últimos 5 partidos
 ## 1. Impacto
 
 ¿Es una mejora o una corrección? ¿Qué problema resuelve o qué agrega, y a quién beneficia?
