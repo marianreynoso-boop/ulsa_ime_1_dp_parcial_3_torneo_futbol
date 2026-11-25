@@ -48,7 +48,7 @@ Explica cada decisión y por qué la tomaste.
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
-[Inserta aquí tu respuesta]
+[Solo refleja casos de rechazo cuando se quiere mostrar la matriz cuando no se han simulado los resultados, muestra: Primero debes simular el torneo.]
 
 ## 5. Receta
 

@@ -31,5 +31,66 @@ En el menu principal se agregan las llamadas a las funciones para mostrar la cla
 
 Receta en pseudocódigo de la solución con tu propuesta. Marca cada paso nuevo con `[NUEVO]` y cada paso que cambia con `[CAMBIA]`. Los pasos sin marca son los que ya existen.
 
-```
-[Inserta aquí tu respuesta]
+[INICIO
+
+    [NUEVO] Crear la funcion intercambiarEquipos
+        Recibir dos apuntadores a equipos
+        Guardar el primer equipo en una variable auxiliar
+        Copiar el segundo equipo en el primero
+        Copiar el equipo auxiliar en el segundo
+    FIN
+
+    [NUEVO] Crear la funcion ordenarClasificacion
+        Recibir el arreglo de equipos y la cantidad
+        Repetir mediante dos ciclos FOR
+            Comparar los puntos de equipos consecutivos
+            Si el equipo actual tiene menos puntos
+                [NUEVO] Intercambiar los equipos usando apuntadores
+            FIN SI
+        FIN FOR
+    FIN
+
+    [NUEVO] Crear la funcion mostrarTabla
+        Verificar que el torneo haya sido simulado
+        Si no ha sido simulado
+            Mostrar mensaje de advertencia
+            Terminar la funcion
+        FIN SI
+
+        [NUEVO] Copiar los equipos a un arreglo auxiliar
+        [NUEVO] Ordenar el arreglo auxiliar por puntos
+        Mostrar encabezados de la tabla
+
+        [CAMBIA] Recorrer el arreglo ordenado
+            Mostrar posicion, nombre y estadisticas
+        FIN FOR
+    FIN
+
+    [NUEVO] Crear la funcion mostrarCampeon
+        Verificar que el torneo haya sido simulado
+        Encontrar la mayor cantidad de puntos
+        Buscar los equipos que tengan esos puntos
+
+        SI existe un solo equipo
+            Mostrar el nombre del campeon
+            Mostrar sus puntos
+        SI NO
+            Mostrar los equipos empatados
+            Solicitar al usuario que elija al campeon
+
+            [NUEVO] Validar que la opcion sea correcta
+            Mientras la opcion sea invalida
+                Solicitar nuevamente la opcion
+            FIN MIENTRAS
+
+            Mostrar el campeon seleccionado
+            Mostrar sus puntos
+        FIN SI
+    FIN
+
+    [CAMBIA] En el menu principal
+        Agregar la llamada a mostrarTabla
+        Agregar la llamada a mostrarCampeon
+    FIN
+
+FIN]
