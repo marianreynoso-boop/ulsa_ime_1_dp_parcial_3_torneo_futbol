@@ -18,13 +18,25 @@ Propuesta de mejora elaborada por: Oliver Fernando López Pineda
 
 ¿Es una mejora o una corrección? ¿Qué problema resuelve o qué agrega, y a quién beneficia?
 
-[Inserta aquí tu respuesta]
+Es una mejora. Agrega la visualización de los 5 partidos con símbolos en la tabla de posiciones (similar a la columna "Últimos 5" de tablas de liga como la Liga MX). Beneficia a quien consulta la tabla de posiciones porque permite ver de forma rápida y visual la racha o tendencia reciente de cada equipo (victorias, empates o derrotas) junto con sus puntos y goles.
+Esto se mostraria como
+Victoria: ✓
+Derrota: x
+Empate: -
+
+Ejemplo: ✓ ✓ x ✓ -
 
 ## 2. Qué implica en el diseño
 
 ¿Qué partes de la solución cambian (registros, arreglos, constantes, funciones, menú)? Justifica cada cambio.
 
-[Inserta aquí tu respuesta]
+Registros (struct Equipo): se agrega un arreglo o historial de los últimos 5 resultados del equipo (y un contador de cuántos lleva registrados) para guardar su racha reciente sin perder el acumulado general 
+
+Constantes: se define una constante como MAX_ULTIMOS_PARTIDOS = 5 para evitar números mágicos al limitar el historial a los últimos 5 encuentros.
+
+Arreglos: cada registro Equipo mantiene su arreglo de tamaño fijo de 5 elementos, desplazando o sobrescribiendo el resultado más antiguo cuando se acumula uno nuevo.
+
+Funciones: se actualiza la acumulación de resultados del equipo para registrar si el partido fue victoria, empate o derrota dentro de sus últimos 5 partidos, y se apoya o ajusta la visualización de la tabla de posiciones para mostrar esos símbolos.
 
 ## 3. Receta
 
