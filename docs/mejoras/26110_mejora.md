@@ -8,10 +8,10 @@ Puede tocar cualquier parte de la solución del equipo y se resuelve con los tem
 Dentro de un equipo no puede haber dos propuestas iguales.
 -->
 
-Propuesta de mejora elaborada por: [Inserta aquí tu respuesta]
+Propuesta de mejora elaborada por: [Lucia Tavares]
 
-**Matrícula:** [Inserta aquí tu respuesta]  
-**Título de la propuesta:** [Inserta aquí tu respuesta]
+**Matrícula:** [26110]  
+**Título de la propuesta:** [Validación de nombres duplicados y cadenas vacías al registrar equipos]
 
 ## 1. Impacto
 
