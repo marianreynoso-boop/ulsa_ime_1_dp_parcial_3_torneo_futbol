@@ -24,27 +24,36 @@ Explica cada decisión y por qué la tomaste.
 
 **¿Qué funciones tiene tu módulo y qué tarea hace cada una?**
 
-[Inserta aquí tu respuesta]
+[prepararMatriz: Se encarga de organizar la información en la matriz, primero la inicializa, después obtiene las primeras tres letras de cada equipo y las convierte en mayúsculas. Luego coloca los nombres y las abreviaturas en sus respectivas posiciones. Finalmente, busca los equipos correspondientes a cada partido y guarda los marcadores en las posiciones correctas.
+mostrarMatriz: Se encarga de imprimir la matriz en forma de tabla. Utiliza alineación a la izquierda y espacios de ancho fijo para que los datos queden organizados.
+consultarMatriz: Comprueba si el torneo ya fue simulado, si no se ha simulado, muestra un mensaje de error, si ya se simuló, llama a las funciones anteriores y después busca al equipo con más goles a favor y al equipo con menos goles en contra.]
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
-[Inserta aquí tu respuesta]
+[Utilicé registros Equipo y Partido, arreglos y una matriz.
+La matriz de cadenas de texto tiene un tamaño de MAX_EQUIPOS + 1 por MAX_EQUIPOS + 1. La elegí porque permite organizar los nombres de los equipos, sus abreviaturas y los resultados de cada enfrentamiento en forma de tabla.
+Un arreglo de cadenas llamado abreviaturas, donde guardo las primeras tres letras de cada equipo.
+Los arreglos de equipos y partidos se pasan como parámetros a las funciones. Los recibo como arreglos constantes porque solamente necesito consultar sus datos y no modificarlos. La matriz se pasa como arreglo bidimensional para poder llenarla y después mostrarla.
+También utilizo variables normales para guardar índices y cantidades, y una variable bool para saber si el torneo ya fue simulado.]
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
-[Inserta aquí tu respuesta]
+[Demuestro los temas asignados al utilizar una matriz bidimensional para organizar los resultados de los enfrentamientos. También utilizo arreglos para guardar las abreviaturas y los datos de los equipos.
+Además, utilizo ciclos anidados para recorrer la matriz, condicionales para encontrar los equipos correspondientes a cada partido y funciones para dividir el programa en diferentes tareas.]
 
 **¿Qué ciclos usaste y por qué esos?**
 
-[Inserta aquí tu respuesta]
+[En prepararMatriz utilizo ciclos for anidados para inicializar todas las posiciones de la matriz. También los utilizo para recorrer los equipos, guardar las abreviaturas y colocar los nombres.Después utilizo ciclos para recorrer los partidos y buscar los índices de los equipos local y visitante, con el propósito de guardar sus marcadores en la matriz.
+En mostrarMatriz utilizo dos ciclos for para recorrer las filas y columnas e imprimir toda la información.
+En consultarMatriz utilizo otro ciclo for para comparar los goles a favor y en contra de los equipos y encontrar el mejor ataque y la mejor defensa.]
 
 **¿Qué constantes usaste y por qué son constantes?**
 
-[Inserta aquí tu respuesta]
+[Utilicé las constantes MAX_EQUIPOS y TOTAL_PARTIDOS que están en torneo.h. y son constantes porque no cambian en todo el programa]
 
 **¿Qué funciones reutilizaste de `utilerias.h`, de `torneo.h` o de otro módulo?**
 
-[Inserta aquí tu respuesta]
+[Reutilicé las estructuras Equipo y Partido, además de las constantes MAX_EQUIPOS y TOTAL_PARTIDOS, que están declaradas en torneo.h.]
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
@@ -172,7 +181,7 @@ FIN consultarMatriz
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
 
-[Inserta aquí tu respuesta]
+[Primero organicé los nombres de los equipos y sus abreviaturas, después coloqué los resultados de cada enfrentamiento en las posiciones correspondientes de la matriz, revisé que los marcadores estuvieran en el orden correcto, que en la posición donde un equipo se enfrenta consigo mismo aparecieran guiones y que los resultados se mostraran invertidos al consultar el partido desde el otro equipo, también revisé la búsqueda de los índices del equipo local y visitante para asegurarme de guardar cada resultado en la posición correcta.]
 
 ## 6. Pruebas
 
@@ -180,24 +189,23 @@ Incluye casos normales y casos límite.
 
 | # | Qué probaste | Entrada | Resultado esperado | Resultado obtenido |
 | --- | --- | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [Mostrar la matriz completa] | [6 equipos y todos los resultados del torneo] | [Mostrar nombres, abreviaturas y marcadores correctamente organizados] | [La matriz se mostró correctamente] |
+| 2 | [Consultar los mejores equipos] | [Resultados de los 15 partidos] | [Mostrar el equipo con más goles a favor y el de menos goles en contra] | [Se mostraron las estadísticas correspondientes] |
+| 3 | [Consultar antes de simular] | [simulacionHecha = false] | [Mostrar el mensaje de rechazo] | [Apareció "Primero debes simular el torneo"] |
 
 ## 7. Bitácora de dudas y errores
 
 | # | Duda o error | Cómo lo resolví |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [No sabía cómo convertir las abreviaturas a mayúsculas] | [Utilicé toupper() para convertir cada letra] |
+| 2 | [No sabía cómo colocar los resultados en las posiciones correctas de la matriz] | [Recorrí los equipos para encontrar los índices del local y visitante y después utilicé esos índices para guardar los marcadores] |
 
 ## 8. Reflexión
 
 **¿Qué aprendiste?**
 
-[Inserta aquí tu respuesta]
+[Aprendí a utilizar una matriz bidimensional para organizar información de una manera más visual y ordenada]
 
 **¿Qué cambiarías de tu proceso?**
 
-[Inserta aquí tu respuesta]
+[Cambiaría la manera en que organicé mi proceso de programación. Primero planearía mejor la distribución de los datos en la matriz y probaría cada función por separado antes de unirlas]
