@@ -43,6 +43,59 @@ Funciones: se actualiza la acumulación de resultados del equipo para registrar 
 
 Receta en pseudocódigo de la solución con tu propuesta. Marca cada paso nuevo con `[NUEVO]` y cada paso que cambia con `[CAMBIA]`. Los pasos sin marca son los que ya existen.
 
-```
-[Inserta aquí tu respuesta]
-```
+FUNCION registrarUltimoResultado(equipo, simbolo) [NUEVO]
+  SI equipo.totalUltimos < MAX_ULTIMOS_PARTIDOS [NUEVO]
+    equipo.ultimos5[equipo.totalUltimos] <- simbolo [NUEVO]
+    equipo.totalUltimos <- equipo.totalUltimos + 1 [NUEVO]
+  SINO [NUEVO]
+    PARA i desde 0 hasta MAX_ULTIMOS_PARTIDOS - 2 [NUEVO]
+      equipo.ultimos5[i] <- equipo.ultimos5[i + 1] [NUEVO]
+    FIN PARA [NUEVO]
+    equipo.ultimos5[MAX_ULTIMOS_PARTIDOS - 1] <- simbolo [NUEVO]
+  FIN SI [NUEVO]
+FIN FUNCION [NUEVO]
+
+FUNCION reiniciarEstadisticas(equipos, cantidadEquipos)
+  PARA i desde 0 hasta cantidadEquipos - 1
+    equipos[i].PJ <- 0
+    equipos[i].PG <- 0
+    equipos[i].PE <- 0
+    equipos[i].PP <- 0
+    equipos[i].GF <- 0
+    equipos[i].GC <- 0
+    equipos[i].PTS <- 0
+    equipos[i].totalUltimos <- 0 [NUEVO]
+  FIN PARA
+FIN FUNCION
+
+FUNCION acumularResultadoPartido(equipoLocal, equipoVisitante, golesLocal, golesVisitante)
+  equipoLocal.PJ <- equipoLocal.PJ + 1
+  equipoVisitante.PJ <- equipoVisitante.PJ + 1
+  equipoLocal.GF <- equipoLocal.GF + golesLocal
+  equipoLocal.GC <- equipoLocal.GC + golesVisitante
+  equipoVisitante.GF <- equipoVisitante.GF + golesVisitante
+  equipoVisitante.GC <- equipoVisitante.GC + golesLocal
+
+  SI golesLocal > golesVisitante
+    equipoLocal.PG <- equipoLocal.PG + 1
+    equipoLocal.PTS <- equipoLocal.PTS + PUNTOS_VICTORIA
+    registrarUltimoResultado(equipoLocal, '✓') [CAMBIA]
+    equipoVisitante.PP <- equipoVisitante.PP + 1
+    equipoVisitante.PTS <- equipoVisitante.PTS + PUNTOS_DERROTA
+    registrarUltimoResultado(equipoVisitante, 'x') [CAMBIA]
+  SINO SI golesLocal < golesVisitante
+    equipoVisitante.PG <- equipoVisitante.PG + 1
+    equipoVisitante.PTS <- equipoVisitante.PTS + PUNTOS_VICTORIA
+    registrarUltimoResultado(equipoVisitante, '✓') [CAMBIA]
+    equipoLocal.PP <- equipoLocal.PP + 1
+    equipoLocal.PTS <- equipoLocal.PTS + PUNTOS_DERROTA
+    registrarUltimoResultado(equipoLocal, 'x') [CAMBIA]
+  SINO
+    equipoLocal.PE <- equipoLocal.PE + 1
+    equipoLocal.PTS <- equipoLocal.PTS + PUNTOS_EMPATE
+    registrarUltimoResultado(equipoLocal, '-') [CAMBIA]
+    equipoVisitante.PE <- equipoVisitante.PE + 1
+    equipoVisitante.PTS <- equipoVisitante.PTS + PUNTOS_EMPATE
+    registrarUltimoResultado(equipoVisitante, '-') [CAMBIA]
+  FIN SI
+FIN FUNCION
