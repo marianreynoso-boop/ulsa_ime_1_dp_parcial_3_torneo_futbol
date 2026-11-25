@@ -120,7 +120,22 @@ Los 6 equipos que registran en el escenario obligatorio, en orden de registro.
 Ejecuten una corrida en modo aleatorio y copien aquí sus 15 resultados.
 
 ```
-[Inserta aquí tu respuesta]
+ Local           Marcador      Vistante
+1-Porrimamis     0-4           Mecanenas
+2.Porrimamis     4-3           Mojarras
+3-Porrimamis     4-1           Habibis
+4-Porrimamis     4-4           Neftalis
+5.Porrimamis     5-1           Pescados
+6-Mecanenas      4-1           Mojarras
+7-Mecanenas      4-1           Habibis
+8-Mecanenas      4-3          Neftalis
+9-Mecanenas      2-1          Pescados
+10-Mojarras      0-5          Habibis
+11-Mojarras      1-5          Neftalis
+12-Mojarras      3-3          Pescados
+13-Habibis       3-1          Neftalis
+14-Habibis       3-5          Pescados
+15-Neftalis      0-3          Pescados
 ```
 
 Antes de consultar los demás reportes de esa corrida, calculen a mano los resultados.
@@ -129,20 +144,25 @@ Antes de consultar los demás reportes de esa corrida, calculen a mano los resul
 
 | Equipo | PJ | PG | PE | PP | GF | GC | PTS |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| [Mecanenas] | [5] | [5] | [0] | [0] | [18] | [6] | [15] |
 
-**Campeón o equipos empatados en el primer lugar:** [Inserta aquí tu respuesta]  
-**Mejor ataque:** [Inserta aquí tu respuesta]  
-**Mejor defensa:** [Inserta aquí tu respuesta]
+| [Porrimamis] | [5] | [3] | [1] | [1] | [17] | [13] | [10] |
+
+| [Pescados] | [5] | [2] | [1] | [2] | [13] | [13] | [7] |
+
+| [Habibis] | [5] | [2] | [0] | [3] | [13] | [14] | [6] |
+
+| [Neftalis] | [5] | [1] | [1] | [3] | [13] | [15] | [4] |
+
+| [Mojarras] | [5] | [0] | [1] | [4] | [8] | [21] | [1] |
+
+**Campeón o equipos empatados en el primer lugar:** [Mecanenas]  
+**Mejor ataque:** [Mecanenas]  
+**Mejor defensa:** [Mecanenas]
 
 **¿La salida del programa coincidió con el cálculo a mano? Si no, ¿qué corrigieron?**
 
-[Inserta aquí tu respuesta]
+[si coincidio]
 
 ## 8. Receta del menú
 
