@@ -37,39 +37,62 @@ mostrarResultados: imprime la tabla si ya se simulo el torneo]
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
-[areeglos de registro (Equipo, Partido)agrupan los datos cada uno y la matriz GOLES_PRUEBA]
+[areeglos de registro (Equipo, Partido)agrupan los datos cada uno y la matriz GOLES_PRUEBA para los marcadores fijos. los arreglos para modificar sin copiar son numPartidos y yasimulado por referencia porque cambian; numEquipos por valor y en mostrarResultados van const porque solo lee]
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
-[Inserta aquí tu respuesta]
+[en GOLES_PRUEBA]
 
 **¿Qué ciclos usaste y por qué esos?**
 
-[Inserta aquí tu respuesta]
+[for anidado (j = i + 1) para emparejar cada equipo con los siguientes sin repetir.
+for para imprimir los partidos.
+ while para repetir la pregunta hasta que el modo sea válido ]
 
 **¿Qué constantes usaste y por qué son constantes?**
 
-[Inserta aquí tu respuesta]
+[MAX_EQUIPOS Y TOTAL_PARTIDOS tamaño de los arreglos no deben cambiar y GOLES_PRUEBBA son marcadores fijos para pruebas repetibles]
 
 **¿Qué funciones reutilizaste de `utilerias.h`, de `torneo.h` o de otro módulo?**
 
-[Inserta aquí tu respuesta]
+[leerEntero y numeroAleatorio, Equipo, Partido]
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
-[Inserta aquí tu respuesta]
+[yasimulado: error, el torneo ya fue simulado
+modo invalido: Opcion no valida. elighe 1 o 2 ]
 
 ## 5. Receta
 
 Tu receta en pseudocódigo, escrita antes de programar.
 
 ```
-[Inserta aquí tu respuesta]
+[simulartorneo:
+  SI numEquipos < MAX_EQUIPOS → error, regresar falso
+  SI yasimulado → error, regresar falso
+  mostrar menú y leer modo
+  MIENTRAS modo != 1 y modo != 2 → repetir lectura
+  indice = 0
+  PARA i de 0 a MAX_EQUIPOS-2
+    PARA j de i+1 a MAX_EQUIPOS-1
+      local = equipos[i], visitante = equipos[j]
+      SI modo = 1 → goles aleatorios
+      SINO → goles = GOLES_PRUEBA[indice]
+      indice++
+  numPartidos = indice; yasimulado = verdadero
+  calcular estadísticas
+  imprimir tabla
+  regresar verdadero
+
+mostrarResultados:
+  SI NO yasimulado → error, salir
+  imprimir encabezado
+  PARA cada partido → imprimir #, local, marcador, visitante]
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
 
-[Inserta aquí tu respuesta]
+[si, con eso verifique que se generan TOTAL_PARTIDOS de que para que no hubieran partidos sin repeti y que el orden concidiera con el de GOLES_PRUEBA ]
 
 ## 6. Pruebas
 
@@ -77,7 +100,7 @@ Incluye casos normales y casos límite.
 
 | # | Qué probaste | Entrada | Resultado esperado | Resultado obtenido |
 | --- | --- | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [faltan equipos] | [numEquipos<Max_EQUIPOS] | [Mensaje de error, no simula] | [igual] |
 | 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 
@@ -85,7 +108,7 @@ Incluye casos normales y casos límite.
 
 | # | Duda o error | Cómo lo resolví |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [use la funcion de bool sin return al final ] | [agregue el return true al final] |
 | 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 
@@ -93,8 +116,8 @@ Incluye casos normales y casos límite.
 
 **¿Qué aprendiste?**
 
-[Inserta aquí tu respuesta]
+[nombre la verdad profe aprendi un buen de cosas ya que la verdad no tenia ni idea de como empezarlo o hacerlo, osea si tenia la idea porque la habia escrito pero nop estaba segura de que fuera correcta ]
 
 **¿Qué cambiarías de tu proceso?**
 
-[Inserta aquí tu respuesta]
+[intentaria no confiarme de que si estaba facil JAJAJJAA porque lo habia emepzado a escribir en mi cuaderno ya que ya nos habia explicado como hacerlo y habia escrito mi idea pero al final me confie y pues si esta correcta pero le faltaba]
