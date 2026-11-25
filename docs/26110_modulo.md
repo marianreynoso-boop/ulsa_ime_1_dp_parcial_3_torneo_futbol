@@ -8,7 +8,7 @@ y llena tu copia. En equipos de cinco, el módulo 6 usa docs/modulo_6/modulo.md.
 
 **Nombre:** [Lucia Tavares]  
 **Matrícula:** [26110]  
-**Módulo:** [Inserta aquí tu respuesta]  
+**Módulo:** [1]  
 **Archivo de código:** [registro.h y registro.cpp]
 
 ## 2. Propósito
