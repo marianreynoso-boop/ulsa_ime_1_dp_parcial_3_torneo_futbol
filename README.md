@@ -66,12 +66,12 @@ Los 6 equipos que registran en el escenario obligatorio, en orden de registro.
 
 | # | Nombre | Abreviatura |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 5 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 6 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [Porrimamis] | [POR] |
+| 2 | [Mecanenas] | [MEC] |
+| 3 | [Mojarras] | [MOJ] |
+| 4 | [Habibis] | [HAB] |
+| 5 | [Neftalis] | [NEF] |
+| 6 | [Pescados] | [PES] |
 
 ## 7. Cálculo a mano
 
