@@ -78,7 +78,7 @@ int main() {
                             case 6:
                             std::cout<< "CAMPEON: \n";
                             break;
-                                
+    
                                 case 7: 
                                 mostrarFichaEquipo(equipos, totalEquipos);
                                 break;
