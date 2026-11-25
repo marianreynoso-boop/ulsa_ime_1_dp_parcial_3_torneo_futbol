@@ -61,7 +61,7 @@ std::string abreviaturas[MAX_EQUIPOS];
         if (indiceLocal != -1 && indiceVisitante != -1) {
 
             m[indiceLocal + 1][indiceVisitante + 1] =
-                std::to_string(partidos[p].golesLocal) + "-" + std::to_string(partidos[p].golesVisitante);
+                std::to_string(partidos[p].golesLocal) + "-" + std::to_string(partidos[p].golesVisitante); //std::to_string convierte los numeros a cadenas de texto
 
             m[indiceVisitante + 1][indiceLocal + 1] =
                 std::to_string(partidos[p].golesVisitante) + "-" + std::to_string(partidos[p].golesLocal);
