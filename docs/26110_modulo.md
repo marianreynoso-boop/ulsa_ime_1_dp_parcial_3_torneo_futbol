@@ -6,16 +6,17 @@ y llena tu copia. En equipos de cinco, el módulo 6 usa docs/modulo_6/modulo.md.
 
 ## 1. Autor
 
-**Nombre:** [Inserta aquí tu respuesta]  
-**Matrícula:** [Inserta aquí tu respuesta]  
+**Nombre:** [Lucia Tavares]  
+**Matrícula:** [26110]  
 **Módulo:** [Inserta aquí tu respuesta]  
-**Archivo de código:** [Inserta aquí tu respuesta]
+**Archivo de código:** [registro.h y registro.cpp]
 
 ## 2. Propósito
 
 ¿Qué hace tu módulo y para qué le sirve a quien usa el programa?
 
-[Inserta aquí tu respuesta]
+
+Mi módulo se encarga de dar de alta nuevos equipos dentro del sistema del torneo. Le sirve a quien usa el programa para poder registrar participantes nuevos en el campeonato, asegurándose de que cada equipo se guarde con su nombre y con todas sus estadísticas inicializadas en cero para que no haya datos basura que afecten los cálculos de los partidos[cite: 1, 2].
 
 ## 3. Entradas y salidas
 
