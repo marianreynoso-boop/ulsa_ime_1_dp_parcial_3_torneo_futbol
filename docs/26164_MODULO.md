@@ -105,7 +105,7 @@ FUNCION prepararMatriz
 
 FIN DE LA FUNCIÓN
 
-FUNCIÓN mostrarMatriz(m)
+FUNCIÓN mostrarMatriz
 
     Mostrar título "MATRIZ DE ENFRENTAMIENTOS"
 
