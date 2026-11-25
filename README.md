@@ -239,4 +239,4 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 
 Si cambiaron una constante de `include/torneo.h`, expliquen qué cambiaron y por qué. Si no cambiaron nada, escriban "Sin cambios".
 
-[Inserta aquí tu respuesta]
+[Sin cambios]
