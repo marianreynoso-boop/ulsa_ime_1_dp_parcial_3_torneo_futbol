@@ -121,6 +121,7 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 | 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 5 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 6 | [docs/26164_modulo.md] | [docs/mejoras/26164_mejora.md] |
 
 <!-- Si el equipo es de seis integrantes, agreguen una fila para el módulo 6. En equipos de cinco, agreguen una fila con el enlace a docs/modulo_6/modulo.md, sin propuesta de mejora. -->
 

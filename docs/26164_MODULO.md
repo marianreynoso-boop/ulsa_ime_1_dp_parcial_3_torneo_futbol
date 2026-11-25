@@ -55,52 +55,53 @@ Explica cada decisión y por qué la tomaste.
 Tu receta en pseudocódigo, escrita antes de programar.
 
 ```
-m[MAX_EQUIPOS+1][MAX_EQUIPOS+1]
-PARA fila DESDE 0 HASTA MAX_EQUIPOS+1 HACER
-    PARA columna DESDE 0 HASTA MAX_EQUIPOS HACER
-    Asignar cadena vacia a toda la matriz
+FUNCION prepararMatriz    
+    m[MAX_EQUIPOS+1][MAX_EQUIPOS+1]
+    PARA fila DESDE 0 HASTA MAX_EQUIPOS+1 HACER
+        PARA columna DESDE 0 HASTA MAX_EQUIPOS HACER
+        Asignar cadena vacia a toda la matriz
+        FIN PARA
     FIN PARA
-FIN PARA
 
-PARA i DESDE 0 HASTA MAX_EQUIPOS HACER
-    Obtener primeras 3 letras del nombre
-    Convertir letras a mayuscula
-    Guardar abreviaturas en el arreglo
-FIN PARA
-
-PARA columna DESDE 1 HASTA MAX_EQUIPOS+1 HACER
-    Guardar abreviatura en la posicion corresponidente
-FIN PARA
-
-PARA fila DESDE 1 HASTA MAX_EQUIPOS+1 HACER
-    Guardar el nombre del equipo en la posicion corresponidente
-FIN PARA
-
-PARA i DESDE 1 HASTA MAX_EQUIPOS HACER
-    Asignar "---" a la posición m[i][i]
-FIN PARA
-
-PARA p DESDE 0 HASTA TOTAL_PARTIDOS - 1 HACER
-
-    Inicializar el índice del equipo local en -1
-    Inicializar el índice del equipo visitante en -1
-
-    PARA i DESDE 0 HASTA MAX_EQUIPOS - 1 HACER
-        SI el nombre del equipo coincide con el equipo local ENTONCES
-            Guardar su índice
-        FIN SI
-
-        SI el nombre del equipo coincide con el equipo visitante ENTONCES
-            Guardar su índice
-        FIN SI
+    PARA i DESDE 0 HASTA MAX_EQUIPOS HACER
+        Obtener primeras 3 letras del nombre
+        Convertir letras a mayuscula
+        Guardar abreviaturas en el arreglo
     FIN PARA
+
+    PARA columna DESDE 1 HASTA MAX_EQUIPOS+1 HACER
+        Guardar abreviatura en la posicion corresponidente
+    FIN PARA
+
+    PARA fila DESDE 1 HASTA MAX_EQUIPOS+1 HACER
+        Guardar el nombre del equipo en la posicion corresponidente
+    FIN PARA
+
+    PARA i DESDE 1 HASTA MAX_EQUIPOS HACER
+        Asignar "---" a la posición m[i][i]
+    FIN PARA
+
+    PARA p DESDE 0 HASTA TOTAL_PARTIDOS - 1 HACER
+
+        Inicializar el índice del equipo local en -1
+        Inicializar el índice del equipo visitante en -1
+
+        PARA i DESDE 0 HASTA MAX_EQUIPOS - 1 HACER
+            SI el nombre del equipo coincide con el equipo local ENTONCES
+                Guardar su índice
+            FIN SI
+
+            SI el nombre del equipo coincide con el equipo visitante ENTONCES
+                Guardar su índice
+            FIN SI
+        FIN PARA
     
-    SI se encontraron ambos equipos ENTONCES
-        Guardar el marcador del local contra el visitante
-        Guardar el marcador invertido del visitante contra el local
-    FIN SI
+        SI se encontraron ambos equipos ENTONCES
+            Guardar el marcador del local contra el visitante
+            Guardar el marcador invertido del visitante contra el local
+        FIN SI
 
-FIN PARA
+    FIN PARA
 
 FIN DE LA FUNCIÓN
 
