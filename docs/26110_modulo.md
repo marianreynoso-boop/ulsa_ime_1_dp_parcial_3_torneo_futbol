@@ -22,7 +22,9 @@ Mi módulo se encarga de dar de alta nuevos equipos dentro del sistema del torne
 
 ¿Qué recibe tu módulo (parámetros y datos del teclado) y qué produce (lo que imprime o devuelve)?
 
-[Inserta aquí tu respuesta]
+[Recibe como parámetros el arreglo de estructuras `Equipo arregloEquipos[]` y el contador actual de equipos por referencia `int &totalEquipos`. Desde el teclado recibe un `std::string nuevoNombre` que el usuario escribe al momento de registrar el equipo.
+
+Salidas: La función no devuelve ningún valor (`void`), pero modifica directamente el arreglo guardando el nuevo equipo en la posición `totalEquipos` e incrementa ese contador en 1. En consola imprime el mensaje para pedir el nombre, la confirmación de que se registró con éxito o un mensaje de error si el torneo ya está lleno.]
 
 ## 4. Decisiones de diseño
 
@@ -30,11 +32,16 @@ Explica cada decisión y por qué la tomaste.
 
 **¿Qué funciones tiene tu módulo y qué tarea hace cada una?**
 
-[Inserta aquí tu respuesta]
+[registrarEquipo:
+Verifica si todavía hay cupo disponible en el torneo, pide el nombre del nuevo equipo, lo guarda en la siguiente posición libre del arreglo con todas sus estadísticas en cero y aumenta en 1 el total de equipos.]
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
-[Inserta aquí tu respuesta]
+[1. Uso el arreglo unidimensional de registros (`Equipo arregloEquipos[]`) para guardar de forma ordenada toda la información de cada equipo (nombre, puntos y goles).
+
+2. Paso el arreglo sin la palabra `const` porque mi módulo sí modifica los datos del arreglo al agregar un equipo nuevo.
+
+3. Paso la variable `totalEquipos` por referencia (`int &totalEquipos`) para que al sumarle 1 dentro de mi función, el cambio se refleje directamente en la variable original del `main.cpp`.]
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
