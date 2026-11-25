@@ -91,15 +91,15 @@ Incluye casos normales y casos límite.
 
 | # | Qué probaste | Entrada | Resultado esperado | Resultado obtenido |
 | --- | --- | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [Busqueda exitosa] | [ Tigres] | [Muestra los datos y puntos de Tigres] | [Mostró correctamente los datos usando el apuntador] |
+| 2 | [Búsqueda fallida] | [Barcelona] | [Mensaje de error indicando que no se encontró] | [El apuntador regresó nullptr y se imprimió el error.] |
+| 3 | [Mayusculas] | [tigres] | [Puede fallar o no encontrarlo si no coincide exacto.] | [si lo encontró] |
 
 ## 7. Bitácora de dudas y errores
 
 | # | Duda o error | Cómo lo resolví |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [Error de retorno: No podía devolver &arregloEquipos[i] porque chocaba con el tipo Equipo*.] | [entendi la regla de protección de C++ y agregué la palabra const al tipo de retorno en el .h y el .cpp] |
 | 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 
@@ -107,8 +107,8 @@ Incluye casos normales y casos límite.
 
 **¿Qué aprendiste?**
 
-[Inserta aquí tu respuesta]
+Aprendí cómo funciona realmente la protección de datos en C++ con la palabra const y cómo los apuntadores me obligan a ser congruente con esa promesa. También aprendí a compilar proyectos de múltiples archivos (.h y .cpp) usando la terminal, manejar las rutas de los directorios y arreglar errores de sintaxis en cadena causados por llaves faltantes.
 
 **¿Qué cambiarías de tu proceso?**
 
-[Inserta aquí tu respuesta]
+Prestaría más atención al orden y cierre de las llaves { } desde el principio, ya que un simple error de bloque causa mensajes de error muy confusos en otras partes del código (como variables no declaradas). También me aseguraría de guardar siempre los archivos (Ctrl + S) antes de compilar en la terminal.
