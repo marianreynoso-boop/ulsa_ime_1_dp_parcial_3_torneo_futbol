@@ -149,7 +149,75 @@ Antes de consultar los demás reportes de esa corrida, calculen a mano los resul
 Receta en pseudocódigo del programa principal: el menú y cómo se conecta con cada módulo.
 
 ```
-[Inserta aquí tu respuesta]
+[INICIO
+
+    Crear el arreglo de equipos
+    Crear el arreglo de partidos
+    Inicializar totalEquipos en 0
+    Inicializar totalPartidos en 0
+    Inicializar simulacionHecha en falso
+
+    Solicitar el nombre del usuario
+    Mostrar mensaje de bienvenida
+
+    Mientras la opcion sea diferente de 9
+
+        Mostrar el menu principal
+        Solicitar una opcion al usuario
+
+        SEGUN la opcion
+
+            CASO 1:
+                Llamar a registrarEquipo
+                Registrar un equipo
+            FIN CASO
+
+            CASO 2:
+                Llamar a mostrarEquipos
+                Mostrar los equipos registrados
+            FIN CASO
+
+            CASO 3:
+                Llamar a simulartorneo
+                Simular los partidos
+                Llamar a calcularEstadisticasEquipos
+                Actualizar las estadisticas
+            FIN CASO
+
+            CASO 4:
+                Llamar a mostrarResultados
+                Mostrar los resultados de los partidos
+            FIN CASO
+
+            CASO 5:
+                Llamar a mostrarTabla
+                Mostrar la tabla de posiciones
+            FIN CASO
+
+            CASO 6:
+                Llamar a mostrarCampeon
+                Mostrar al campeon del torneo
+            FIN CASO
+
+            CASO 7:
+                Llamar a mostrarFichaEquipo
+                Consultar la informacion de un equipo
+            FIN CASO
+
+            CASO 8:
+                Llamar a consultarMatriz
+                Mostrar la matriz de enfrentamientos
+            FIN CASO
+
+            CASO 9:
+                Terminar el programa
+            FIN CASO
+
+        FIN SEGUN
+
+    FIN MIENTRAS
+
+FIN]
 ```
 
 ## 9. Documentación individual
