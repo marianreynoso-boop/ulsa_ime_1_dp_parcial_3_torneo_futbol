@@ -10,6 +10,7 @@
 #include <random>
 #include <stdexcept>
 #include "torneo.h"
+#include "utilerias.h"
 
 inline void intercambiarEquipos(Equipo* uno, Equipo* dos) {
     if (uno != nullptr && dos != nullptr) {

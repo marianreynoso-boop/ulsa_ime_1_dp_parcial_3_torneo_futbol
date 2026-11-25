@@ -67,16 +67,17 @@ int main() {
             break;
                 case 3:
                 std::cout<< "Simulacion de torneo \n";
+                simulartorneo(equipos, totalEquipos, partidos, totalPartidos, simulacionHecha);
                 calcularEstadisticasEquipos(equipos, partidos);
                 break;
                     case 4:
                     mostrarResultados(partidos, totalPartidos, simulacionHecha);
                     break;
                         case 5:
-                        std::cout<< "Tabla de Posiciones: \n";
+                        mostrarTabla(equipos, totalEquipos, simulacionHecha);
                         break;
                             case 6:
-                            std::cout<< "CAMPEON: \n";
+                            mostrarCampeon(equipos, totalEquipos, simulacionHecha);
                             break;
     
                                 case 7: 
