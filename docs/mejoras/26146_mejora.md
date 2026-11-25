@@ -19,7 +19,8 @@ Propuesta de mejora elaborada por: Oliver Fernando López Pineda
 ¿Es una mejora o una corrección? ¿Qué problema resuelve o qué agrega, y a quién beneficia?
 
 Es una mejora. Agrega la visualización de los 5 partidos con símbolos en la tabla de posiciones (similar a la columna "Últimos 5" de tablas de liga como la Liga MX). Beneficia a quien consulta la tabla de posiciones porque permite ver de forma rápida y visual la racha o tendencia reciente de cada equipo (victorias, empates o derrotas) junto con sus puntos y goles.
-Esto se mostraria como
+Esto se mostraria como:
+
 Victoria: ✓
 Derrota: x
 Empate: -
