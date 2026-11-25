@@ -52,7 +52,23 @@ Para ejecutar en Windows:
 
 Describan cada TDA que diseñaron como registro (`struct`): qué datos guarda, qué operaciones tiene y por qué.
 
-[Inserta aquí tu respuesta]
+[En nuestro programa utilizamos dos estructuras principales para guardar y organizar la informacion del torneo.
+
+TDA Equipo
+
+El registro Equipo guarda los datos de cada equipo participante. Contiene su nombre, abreviatura y las estadisticas que obtiene durante el torneo, como partidos jugados, ganados, empatados, perdidos, goles a favor, goles en contra y puntos.
+
+Las operaciones que se realizan con este registro son registrar equipos, mostrar sus datos, consultar su informacion y actualizar sus estadisticas despues de cada partido.
+
+Se utiliza esta estructura porque permite tener toda la informacion de un equipo organizada en un solo registro, facilitando su manejo dentro del programa.
+
+TDA Partido
+
+El registro Partido guarda la informacion de cada enfrentamiento entre dos equipos. Contiene los equipos participantes y los goles que anotaron durante el partido.
+
+Las operaciones que se realizan con este registro son guardar los resultados, mostrar los partidos y consultar los enfrentamientos de cada equipo.
+
+Se utiliza esta estructura porque permite almacenar los resultados de todos los partidos y utilizarlos para calcular las estadisticas del torneo.]
 
 ## 5. Reglas del programa
 
