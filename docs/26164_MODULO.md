@@ -15,8 +15,8 @@
 
 ¿Qué recibe tu módulo (parámetros y datos del teclado) y qué produce (lo que imprime o devuelve)?
 
-[Entradas: nombres de equipos, cantidad de equipos, abreviatura de equipos, resultados de partidos
-Salidas: matriz con los datos recibidos organizados, equipo con más goles anotados, equipo con menos goles en contra]
+[Entradas: nombres de equipos, cantidad de equipos, resultados de partidos
+Salidas: matriz con los datos recibidos organizados, abreviatura de equipos, nombre de equipos, resultados de los equipos por enfrentamiento, equipo con más goles anotados, equipo con menos goles en contra]
 
 ## 4. Decisiones de diseño
 
